@@ -174,7 +174,7 @@ namespace Project_v2
         {
             InitializeComponent();
 
-            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Database\Database.mdb'";
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Database\Database.mdb'";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -299,6 +299,12 @@ namespace Project_v2
         {
 
         }
+
+        private void Insert_class1_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

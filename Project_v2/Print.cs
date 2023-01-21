@@ -23,7 +23,7 @@ namespace Project_v2
         private void Print_Load(object sender, EventArgs e)
         {
             string qur = "Select * from Class_1";
-            conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Database\Database.mdb'");
+            conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Database\Database.mdb'");
             cmd = new OleDbCommand(qur, conn);
             da = new OleDbDataAdapter(cmd);
             da.Fill(ds);
@@ -80,7 +80,7 @@ namespace Project_v2
                 var application = new Microsoft.Office.Interop.Word.Application();
                 var document = new Microsoft.Office.Interop.Word.Document();
 
-                document = application.Documents.Add(Template: @"C:\Users\Aayush\Desktop\c# project\Project_v2\Report-Card_Format\Report-Card.docx");
+                document = application.Documents.Add(Template: @"C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Report-Card_Format\Report-Card.docx");
 
 
                 foreach (Microsoft.Office.Interop.Word.Field field in document.Fields)
@@ -233,7 +233,8 @@ namespace Project_v2
 
                 }
 
-                document.SaveAs(FileName: @"C:\Users\Aayush\Desktop\c# project\Project_v2\Result\Class-1\Result of " + F_name + ".docx");
+                document.SaveAs(FileName: @"C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Result\Class-1\Result of " + F_name + ".docx");
+
 
 
 

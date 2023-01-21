@@ -49,6 +49,11 @@ namespace Project_v2
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
 
     }
 }
