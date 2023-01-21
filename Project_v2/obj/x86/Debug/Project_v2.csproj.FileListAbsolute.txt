@@ -21,3 +21,4 @@ C:\Users\Aayush\Desktop\c# project\Project_v2\Project_v2\obj\x86\Debug\Project_v
 C:\Users\Aayush\Desktop\c# project\Project_v2\Project_v2\obj\x86\Debug\Project_v2.Properties.Resources.resources
 C:\Users\Aayush\Desktop\c# project\Project_v2\Project_v2\obj\x86\Debug\Project_v2.Selection.resources
 C:\Users\Aayush\Desktop\c# project\Project_v2\Project_v2\obj\x86\Debug\Project_v2.csproj.GenerateResource.Cache
+C:\Users\Aayush\Desktop\c# project\Project_v2\Project_v2\obj\x86\Debug\Project_v2.Update.resources

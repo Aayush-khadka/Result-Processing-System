@@ -81,6 +81,12 @@
     <Compile Include="Selection.Designer.cs">
       <DependentUpon>Selection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="class1.resx">
       <DependentUpon>class1.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="Selection.resx">
       <DependentUpon>Selection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -15,5 +15,10 @@ namespace Project_v2
         {
             InitializeComponent();
         }
+
+        private void Update_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
