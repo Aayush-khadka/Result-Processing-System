@@ -23,18 +23,21 @@ namespace Project_v2
         private void Print_Load(object sender, EventArgs e)
         {
             string qur = "Select * from Class_1";
-            conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Database.mdb'");
+            conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Database\Database.mdb'");
             cmd = new OleDbCommand(qur, conn);
             da = new OleDbDataAdapter(cmd);
             da.Fill(ds);
         }
 
+
+
         private void btn_res_Print_Click(object sender, EventArgs e)
         {
 
             int index;
+            int a = int.Parse(txt_no_std.Text);
 
-            for (index = 0; index < 3; index++)
+            for (index = 0; index < a; index++)
             {
 
 
@@ -77,7 +80,7 @@ namespace Project_v2
                 var application = new Microsoft.Office.Interop.Word.Application();
                 var document = new Microsoft.Office.Interop.Word.Document();
 
-                document = application.Documents.Add(Template: @"C:\Users\Aayush\Desktop\c# project\Project_v2\Report-CardV2.docx");
+                document = application.Documents.Add(Template: @"C:\Users\Aayush\Desktop\c# project\Project_v2\Report-Card_Format\Report-Card.docx");
 
 
                 foreach (Microsoft.Office.Interop.Word.Field field in document.Fields)
@@ -237,8 +240,16 @@ namespace Project_v2
 
 
             }
-            MessageBox.Show("All the Results are Made.");
+            MessageBox.Show("Results Created");
         }
+
+
+
+
+
+
+
+
 
 
 

@@ -34,6 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_no_std = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,11 +46,11 @@
             this.btn_res_Print.FlatAppearance.BorderSize = 3;
             this.btn_res_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_res_Print.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_res_Print.Location = new System.Drawing.Point(100, 158);
+            this.btn_res_Print.Location = new System.Drawing.Point(78, 191);
             this.btn_res_Print.Name = "btn_res_Print";
             this.btn_res_Print.Size = new System.Drawing.Size(225, 48);
             this.btn_res_Print.TabIndex = 0;
-            this.btn_res_Print.Text = "Print All the Results";
+            this.btn_res_Print.Text = "Print the Results";
             this.btn_res_Print.UseVisualStyleBackColor = false;
             this.btn_res_Print.Click += new System.EventHandler(this.btn_res_Print_Click);
             // 
@@ -61,7 +63,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 68);
+            this.panel1.Size = new System.Drawing.Size(391, 68);
             this.panel1.TabIndex = 1;
             // 
             // label2
@@ -96,11 +98,31 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // txt_no_std
+            // 
+            this.txt_no_std.Location = new System.Drawing.Point(217, 117);
+            this.txt_no_std.Name = "txt_no_std";
+            this.txt_no_std.Size = new System.Drawing.Size(38, 20);
+            this.txt_no_std.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(109, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 15);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "No of Student :";
+            // 
             // Print
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 354);
+            this.ClientSize = new System.Drawing.Size(391, 320);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txt_no_std);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_res_Print);
             this.Name = "Print";
@@ -111,6 +133,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -121,5 +144,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txt_no_std;
+        private System.Windows.Forms.Label label3;
     }
 }

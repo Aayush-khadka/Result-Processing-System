@@ -154,6 +154,7 @@ namespace Project_v2
             }
 
             else
+                
                 return 0;
         }
 
@@ -172,8 +173,8 @@ namespace Project_v2
         public Insert_class1()
         {
             InitializeComponent();
-            
-            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Database.mdb'";
+
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Database\Database.mdb'";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -210,15 +211,33 @@ namespace Project_v2
             double tot_obtained = (num_english + num_maths + num_nepali + num_science + num_social + num_gk + num_drawing);
 
 
-            double Total_gpa = gpa_check(tot_obtained);
+            
+
 
 
            
 
+
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "INSERT INTO Class_1 (roll_no,F_name,L_name,n_maths,n_science,n_nepali,n_english,n_social,n_gk,n_drawing,g_maths,g_science,g_english,g_nepali,g_social,g_drawing,g_gk,gpa_maths,gpa_science,gpa_english,gpa_nepali,gpa_social,gpa_drawing,gpa_gk,total_marks,final_gpa,Attendance) values('" + txt_rnum.Text + "','" + txt_fname.Text + "','" + txt_lname.Text + "','" + txt_maths.Text + "','" + txt_science.Text + "','" + txt_nepali.Text + "','" + txt_english.Text + "','" + txt_social.Text + "','" + txt_gk.Text + "','" + txt_drawing.Text + "','" + maths_grade + "','" + science_grade + "','" + english_grade + "','" + nepali_grade + "','" + social_grade + "','" + drawing_grade + "','" + gk_grade + "','" + maths_gpa + "','" + science_gpa + "','" + english_gpa + "','" + nepali_gpa + "','" + social_gpa + "','" + drawing_gpa + "','" + gk_gpa + "','" + tot_obtained + "','" + Total_gpa + "','" + txt_Attendance.Text + "')";
-            cmd.ExecuteNonQuery();
+
+                         double Total_gpa;
+           
+
+            if (maths_grade=="NG" || social_grade=="NG" || nepali_grade=="NG"||english_grade=="NG"||science_grade=="NG"||gk_grade=="NG"||drawing_grade=="NG")
+            {
+                string Total_gpa2= "NG";
+                cmd.CommandText = "INSERT INTO Class_1 (roll_no,F_name,L_name,n_maths,n_science,n_nepali,n_english,n_social,n_gk,n_drawing,g_maths,g_science,g_english,g_nepali,g_social,g_drawing,g_gk,gpa_maths,gpa_science,gpa_english,gpa_nepali,gpa_social,gpa_drawing,gpa_gk,total_marks,final_gpa,Attendance) values('" + txt_rnum.Text + "','" + txt_fname.Text + "','" + txt_lname.Text + "','" + txt_maths.Text + "','" + txt_science.Text + "','" + txt_nepali.Text + "','" + txt_english.Text + "','" + txt_social.Text + "','" + txt_gk.Text + "','" + txt_drawing.Text + "','" + maths_grade + "','" + science_grade + "','" + english_grade + "','" + nepali_grade + "','" + social_grade + "','" + drawing_grade + "','" + gk_grade + "','" + maths_gpa + "','" + science_gpa + "','" + english_gpa + "','" + nepali_gpa + "','" + social_gpa + "','" + drawing_gpa + "','" + gk_gpa + "','" + tot_obtained + "','" + Total_gpa2 + "','" + txt_Attendance.Text + "')";
+                cmd.ExecuteNonQuery();
+                
+            }
+            else {
+                Total_gpa = gpa_check(tot_obtained);
+                cmd.CommandText = "INSERT INTO Class_1 (roll_no,F_name,L_name,n_maths,n_science,n_nepali,n_english,n_social,n_gk,n_drawing,g_maths,g_science,g_english,g_nepali,g_social,g_drawing,g_gk,gpa_maths,gpa_science,gpa_english,gpa_nepali,gpa_social,gpa_drawing,gpa_gk,total_marks,final_gpa,Attendance) values('" + txt_rnum.Text + "','" + txt_fname.Text + "','" + txt_lname.Text + "','" + txt_maths.Text + "','" + txt_science.Text + "','" + txt_nepali.Text + "','" + txt_english.Text + "','" + txt_social.Text + "','" + txt_gk.Text + "','" + txt_drawing.Text + "','" + maths_grade + "','" + science_grade + "','" + english_grade + "','" + nepali_grade + "','" + social_grade + "','" + drawing_grade + "','" + gk_grade + "','" + maths_gpa + "','" + science_gpa + "','" + english_gpa + "','" + nepali_gpa + "','" + social_gpa + "','" + drawing_gpa + "','" + gk_gpa + "','" + tot_obtained + "','" + Total_gpa + "','" + txt_Attendance.Text + "')";
+                cmd.ExecuteNonQuery();
+            }
+
+
 
 
 
@@ -275,6 +294,12 @@ namespace Project_v2
         {
             this.Close();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 
