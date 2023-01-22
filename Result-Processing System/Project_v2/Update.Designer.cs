@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_roll_no = new System.Windows.Forms.TextBox();
             this.btn_Submit = new System.Windows.Forms.Button();
@@ -77,8 +77,20 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(852, 68);
+            this.panel1.Size = new System.Drawing.Size(912, 68);
             this.panel1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Open Sans Semibold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
+            this.label3.Location = new System.Drawing.Point(393, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(246, 51);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Update Data";
             // 
             // label2
             // 
@@ -112,23 +124,11 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Open Sans Semibold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
-            this.label3.Location = new System.Drawing.Point(393, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(246, 51);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Update Data";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Modern Sans", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 82);
+            this.label4.Location = new System.Drawing.Point(341, 99);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 13);
             this.label4.TabIndex = 2;
@@ -136,7 +136,7 @@
             // 
             // txt_roll_no
             // 
-            this.txt_roll_no.Location = new System.Drawing.Point(125, 78);
+            this.txt_roll_no.Location = new System.Drawing.Point(454, 95);
             this.txt_roll_no.MaxLength = 2;
             this.txt_roll_no.Name = "txt_roll_no";
             this.txt_roll_no.Size = new System.Drawing.Size(33, 20);
@@ -149,7 +149,7 @@
             this.btn_Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Submit.Font = new System.Drawing.Font("Mosk Bold 700", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Submit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(231)))), ((int)(((byte)(177)))));
-            this.btn_Submit.Location = new System.Drawing.Point(169, 73);
+            this.btn_Submit.Location = new System.Drawing.Point(509, 90);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(99, 29);
             this.btn_Submit.TabIndex = 8;
@@ -175,9 +175,9 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(440, 117);
+            this.groupBox2.Location = new System.Drawing.Point(528, 138);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(282, 136);
+            this.groupBox2.Size = new System.Drawing.Size(342, 136);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Obtained Marks";
@@ -329,9 +329,9 @@
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.txt_fname);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Location = new System.Drawing.Point(11, 117);
+            this.groupBox1.Location = new System.Drawing.Point(15, 138);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(390, 125);
+            this.groupBox1.Size = new System.Drawing.Size(450, 125);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Info";
@@ -390,23 +390,23 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(98)))), ((int)(((byte)(85)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Mosk Bold 700", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(231)))), ((int)(((byte)(177)))));
-            this.button1.Location = new System.Drawing.Point(493, 425);
+            this.button1.Location = new System.Drawing.Point(771, 289);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 29);
             this.button1.TabIndex = 11;
-            this.button1.Text = "Retrive";
+            this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 494);
+            this.ClientSize = new System.Drawing.Size(912, 494);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);

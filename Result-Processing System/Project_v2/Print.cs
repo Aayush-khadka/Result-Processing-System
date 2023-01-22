@@ -15,6 +15,7 @@ namespace Project_v2
         public Print()
         {
             InitializeComponent();
+            MaximizeBox = false;
         }
         OleDbConnection conn;
         OleDbCommand cmd;

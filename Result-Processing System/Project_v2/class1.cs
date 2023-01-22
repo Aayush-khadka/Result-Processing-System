@@ -54,6 +54,13 @@ namespace Project_v2
 
         }
 
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+
+            Update ab = new Update();
+            ab.Show();
+        }
+
 
     }
 }
