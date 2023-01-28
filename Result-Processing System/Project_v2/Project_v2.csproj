@@ -37,6 +37,8 @@
     <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,11 +51,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="class1.cs">
+    <Compile Include="Class 1\class1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="class1.Designer.cs">
+    <Compile Include="Class 1\class1.Designer.cs">
       <DependentUpon>class1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class 1\Edit_marks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class 1\Edit_marks.Designer.cs">
+      <DependentUpon>Edit_marks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class 1\Edit_std_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class 1\Edit_std_data.Designer.cs">
+      <DependentUpon>Edit_std_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class 1\class1_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class 1\class1_delete.Designer.cs">
+      <DependentUpon>class1_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class 1\class1_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class 1\class1_view.Designer.cs">
+      <DependentUpon>class1_view.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -67,11 +93,17 @@
     <Compile Include="Insert_class1.Designer.cs">
       <DependentUpon>Insert_class1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Print.cs">
+    <Compile Include="Class 1\class1_insert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Print.Designer.cs">
-      <DependentUpon>Print.cs</DependentUpon>
+    <Compile Include="Class 1\class1_insert.Designer.cs">
+      <DependentUpon>class1_insert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class 1\class1_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class 1\class1_print.Designer.cs">
+      <DependentUpon>class1_print.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,14 +113,32 @@
     <Compile Include="Selection.Designer.cs">
       <DependentUpon>Selection.cs</DependentUpon>
     </Compile>
-    <Compile Include="Update.cs">
+    <Compile Include="Class 1\class1_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Update.Designer.cs">
-      <DependentUpon>Update.cs</DependentUpon>
+    <Compile Include="Class 1\class1_update.Designer.cs">
+      <DependentUpon>class1_update.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="class1.resx">
+    <Compile Include="Class 1\class1_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class 1\class1_data.Designer.cs">
+      <DependentUpon>class1_data.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Class 1\class1.resx">
       <DependentUpon>class1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class 1\Edit_marks.resx">
+      <DependentUpon>Edit_marks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class 1\Edit_std_data.resx">
+      <DependentUpon>Edit_std_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class 1\class1_delete.resx">
+      <DependentUpon>class1_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class 1\class1_view.resx">
+      <DependentUpon>class1_view.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -96,8 +146,11 @@
     <EmbeddedResource Include="Insert_class1.resx">
       <DependentUpon>Insert_class1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print.resx">
-      <DependentUpon>Print.cs</DependentUpon>
+    <EmbeddedResource Include="Class 1\class1_insert.resx">
+      <DependentUpon>class1_insert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class 1\class1_print.resx">
+      <DependentUpon>class1_print.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,8 +164,11 @@
     <EmbeddedResource Include="Selection.resx">
       <DependentUpon>Selection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Update.resx">
-      <DependentUpon>Update.cs</DependentUpon>
+    <EmbeddedResource Include="Class 1\class1_update.resx">
+      <DependentUpon>class1_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class 1\class1_data.resx">
+      <DependentUpon>class1_data.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

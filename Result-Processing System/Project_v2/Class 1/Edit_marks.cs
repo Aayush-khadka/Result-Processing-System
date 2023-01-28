@@ -9,18 +9,16 @@ using System.Windows.Forms;
 
 namespace Project_v2
 {
-    public partial class Update : Form
+    public partial class Edit_marks : Form
     {
-        public Update()
+        public Edit_marks()
         {
             InitializeComponent();
         }
 
-        private void Update_Load(object sender, EventArgs e)
+        private void Edit_marks_Load(object sender, EventArgs e)
         {
 
         }
-
-
     }
 }

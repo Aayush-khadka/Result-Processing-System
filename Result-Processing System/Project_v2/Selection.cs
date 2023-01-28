@@ -19,18 +19,29 @@ namespace Project_v2
 
         private void btn_class1_Click(object sender, EventArgs e)
         {
-            
-            class1 ab = new class1();
-            ab.Show();
-            this.Hide();
-           
+            class1 class1 = new class1();
+            class1.Show();
+            this.Hide();  
         }
 
-        private void Selection_Load(object sender, EventArgs e)
+        private void btn_class2_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Under Development");
         }
 
+        private void btn_class3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Under Development");
+        }
 
+        private void btn_class4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Under Development");
+        }
+
+        private void btn_class5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Under Development");
+        }
     }
 }

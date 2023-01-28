@@ -22,10 +22,8 @@ namespace Project_v2
             string password = txt_pass.Text;
             if (username == "Aayush" && password == "Aayush123")
             {
-                
                 Selection ab = new Selection();
                 ab.Show();
-                
                 this.Hide();
             }
             else
@@ -34,11 +32,6 @@ namespace Project_v2
                 txt_pass.Clear();
                 txt_user.Clear();
             }
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

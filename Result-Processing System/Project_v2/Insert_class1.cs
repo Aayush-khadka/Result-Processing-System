@@ -125,7 +125,7 @@ namespace Project_v2
 
             else if (j == "B+")
             {
-                double c = 2.2;
+                double c = 3.2;
                 return c;
             }
 
@@ -301,6 +301,11 @@ namespace Project_v2
         }
 
         private void Insert_class1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

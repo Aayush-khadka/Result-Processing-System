@@ -35,3 +35,9 @@ C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v
 C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.csproj.GenerateResource.Cache
 C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\bin\Debug\Project_v2.exe
 C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\bin\Debug\Project_v2.pdb
+C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.Insert_Class_One.resources
+C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.std_data.resources
+C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.Edit_marks.resources
+C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.Edit_std_data.resources
+C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.class1_delete.resources
+C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.class1_view.resources
