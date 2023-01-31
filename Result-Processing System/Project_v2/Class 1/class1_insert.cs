@@ -114,7 +114,11 @@ namespace Project_v2
                 string grade= Sub_grade_check(marks);
                 double gp = sub_gp_check(grade);
                 int roll = int.Parse(lbl_num.Text);
-                cmd.CommandText = "INSERT INTO Class_1 (n_maths,g_maths,gp_maths,roll_no) VALUES('" + marks + "','" + grade + "','" + gp + "','" + roll + "')";
+                cmd.CommandText = @"Update Class_1 SET n_maths =@marks,g_maths=@grade,gp_maths=@gp where roll_no=@roll";
+                cmd.Parameters.AddWithValue("@marks", marks);
+                cmd.Parameters.AddWithValue("@grade", grade);
+                cmd.Parameters.AddWithValue("@gp", gp);
+                cmd.Parameters.AddWithValue("@roll", roll);
                 cmd.ExecuteNonQuery();
                 txt_marks.Clear();
                 conn.Close();   
@@ -147,7 +151,18 @@ namespace Project_v2
         private  void btn_Submit_Click(object sender, EventArgs e)
         {
             string subject = combo_Subject.Text;
-            
+            num++;
+            int index = num;
+            string sql = "Select Roll_no,f_name,l_name from Std_Data";
+            OleDbCommand cmmd = new OleDbCommand(sql, conn);
+            DataSet ds = new DataSet();
+            OleDbDataAdapter daa = new OleDbDataAdapter(cmmd);
+            daa.Fill(ds);
+            lbl_num.Text = ds.Tables[0].Rows[index]["Roll_no"].ToString();
+            string first_name = ds.Tables[0].Rows[index]["f_name"].ToString();
+            string last_name = ds.Tables[0].Rows[index]["l_name"].ToString();
+            lbl_std_name.Text = first_name + " " + last_name;
+
             if (subject=="Maths")
             {  
                 maths();
@@ -176,17 +191,7 @@ namespace Project_v2
                 conn.Close();
             }
 
-            num++;
-            int index = num;
-            string sql = "Select Roll_no,f_name,l_name from Std_Data";
-            OleDbCommand cmmd = new OleDbCommand(sql, conn);
-            DataSet ds = new DataSet();
-            OleDbDataAdapter daa = new OleDbDataAdapter(cmmd);
-            daa.Fill(ds);
-            lbl_num.Text = ds.Tables[0].Rows[index]["Roll_no"].ToString();
-            string first_name = ds.Tables[0].Rows[index]["f_name"].ToString();
-            string last_name = ds.Tables[0].Rows[index]["l_name"].ToString();
-            lbl_std_name.Text = first_name + " " + last_name;
+            
             
         }
 
@@ -202,6 +207,11 @@ namespace Project_v2
             string first_name = ds.Tables[0].Rows[count]["f_name"].ToString();
             string last_name = ds.Tables[0].Rows[count]["l_name"].ToString();
             lbl_std_name.Text = first_name + " " + last_name;
+
+        }
+
+        private void Insert_Class_One_Load(object sender, EventArgs e)
+        {
 
         }
     }

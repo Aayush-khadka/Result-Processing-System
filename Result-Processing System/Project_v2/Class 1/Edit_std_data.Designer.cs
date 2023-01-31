@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Submit = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_Update = new System.Windows.Forms.Button();
+            this.txt_age = new System.Windows.Forms.TextBox();
             this.txt_dob = new System.Windows.Forms.TextBox();
             this.lbl_dob = new System.Windows.Forms.Label();
             this.lbl_age = new System.Windows.Forms.Label();
@@ -39,33 +39,34 @@
             this.txt_fname = new System.Windows.Forms.TextBox();
             this.lbl_lname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_retrive = new System.Windows.Forms.Button();
             this.txt_rollno = new System.Windows.Forms.TextBox();
             this.lbl_fname = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btn_Submit
+            // btn_Update
             // 
-            this.btn_Submit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_Submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(98)))), ((int)(((byte)(85)))));
-            this.btn_Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Submit.Font = new System.Drawing.Font("Mosk Bold 700", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Submit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(231)))), ((int)(((byte)(177)))));
-            this.btn_Submit.Location = new System.Drawing.Point(516, 249);
-            this.btn_Submit.Name = "btn_Submit";
-            this.btn_Submit.Size = new System.Drawing.Size(116, 38);
-            this.btn_Submit.TabIndex = 45;
-            this.btn_Submit.Text = "Update";
-            this.btn_Submit.UseVisualStyleBackColor = false;
+            this.btn_Update.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(98)))), ((int)(((byte)(85)))));
+            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Update.Font = new System.Drawing.Font("Mosk Bold 700", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Update.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(231)))), ((int)(((byte)(177)))));
+            this.btn_Update.Location = new System.Drawing.Point(516, 249);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(116, 38);
+            this.btn_Update.TabIndex = 45;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
-            // textBox1
+            // txt_age
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Location = new System.Drawing.Point(516, 155);
-            this.textBox1.MaxLength = 20;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(33, 20);
-            this.textBox1.TabIndex = 44;
+            this.txt_age.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_age.Location = new System.Drawing.Point(516, 155);
+            this.txt_age.MaxLength = 20;
+            this.txt_age.Name = "txt_age";
+            this.txt_age.Size = new System.Drawing.Size(33, 20);
+            this.txt_age.TabIndex = 44;
             // 
             // txt_dob
             // 
@@ -157,19 +158,20 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "First Name:";
             // 
-            // button1
+            // btn_retrive
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(98)))), ((int)(((byte)(85)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Mosk Bold 700", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(231)))), ((int)(((byte)(177)))));
-            this.button1.Location = new System.Drawing.Point(400, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 30);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_retrive.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_retrive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(98)))), ((int)(((byte)(85)))));
+            this.btn_retrive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_retrive.Font = new System.Drawing.Font("Mosk Bold 700", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_retrive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(231)))), ((int)(((byte)(177)))));
+            this.btn_retrive.Location = new System.Drawing.Point(400, 23);
+            this.btn_retrive.Name = "btn_retrive";
+            this.btn_retrive.Size = new System.Drawing.Size(99, 30);
+            this.btn_retrive.TabIndex = 34;
+            this.btn_retrive.Text = "Retrive";
+            this.btn_retrive.UseVisualStyleBackColor = false;
+            this.btn_retrive.Click += new System.EventHandler(this.btn_retrive_Click);
             // 
             // txt_rollno
             // 
@@ -196,8 +198,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 361);
-            this.Controls.Add(this.btn_Submit);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_Update);
+            this.Controls.Add(this.txt_age);
             this.Controls.Add(this.txt_dob);
             this.Controls.Add(this.lbl_dob);
             this.Controls.Add(this.lbl_age);
@@ -207,7 +209,7 @@
             this.Controls.Add(this.txt_fname);
             this.Controls.Add(this.lbl_lname);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_retrive);
             this.Controls.Add(this.txt_rollno);
             this.Controls.Add(this.lbl_fname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -220,8 +222,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_Submit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_Update;
+        private System.Windows.Forms.TextBox txt_age;
         private System.Windows.Forms.TextBox txt_dob;
         private System.Windows.Forms.Label lbl_dob;
         private System.Windows.Forms.Label lbl_age;
@@ -231,7 +233,7 @@
         private System.Windows.Forms.TextBox txt_fname;
         private System.Windows.Forms.Label lbl_lname;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_retrive;
         private System.Windows.Forms.TextBox txt_rollno;
         private System.Windows.Forms.Label lbl_fname;
     }

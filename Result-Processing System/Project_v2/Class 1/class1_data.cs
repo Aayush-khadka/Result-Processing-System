@@ -33,6 +33,8 @@ namespace Project_v2
 
             cmd.CommandText = "INSERT INTO Std_Data (Roll_no,f_name,l_name,age,DOB,phone) VALUES('" + roll + "','" + f_name + "','" + l_name + "','" + age + "','" + dob + "','" + phone + "')";
             cmd.ExecuteNonQuery();
+            cmd.CommandText = "INSERT INTO class_1 (roll_no) VALUES('" + roll + "')";
+            cmd.ExecuteNonQuery();
 
             MessageBox.Show("Data Inserted");
             Action<Control.ControlCollection> func = null;
@@ -49,5 +51,11 @@ namespace Project_v2
             conn.Close();
 
         }
+
+        private void std_data_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -133,7 +133,6 @@
             this.Name = "Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update";
-            this.Load += new System.EventHandler(this.Update_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

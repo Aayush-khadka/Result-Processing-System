@@ -39,9 +39,9 @@
             this.lbl_age = new System.Windows.Forms.Label();
             this.txt_age = new System.Windows.Forms.TextBox();
             this.lbl_dob = new System.Windows.Forms.Label();
-            this.txt_dob = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_rollno = new System.Windows.Forms.TextBox();
+            this.txt_dob = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +55,6 @@
             this.label1.Size = new System.Drawing.Size(200, 33);
             this.label1.TabIndex = 1;
             this.label1.Text = "Add Student ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbl_fname
             // 
@@ -83,7 +82,7 @@
             // 
             this.txt_fname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_fname.Location = new System.Drawing.Point(151, 77);
-            this.txt_fname.MaxLength = 20;
+            this.txt_fname.MaxLength = 10;
             this.txt_fname.Name = "txt_fname";
             this.txt_fname.Size = new System.Drawing.Size(112, 20);
             this.txt_fname.TabIndex = 4;
@@ -92,7 +91,7 @@
             // 
             this.txt_lname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_lname.Location = new System.Drawing.Point(512, 77);
-            this.txt_lname.MaxLength = 20;
+            this.txt_lname.MaxLength = 10;
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(112, 20);
             this.txt_lname.TabIndex = 5;
@@ -156,19 +155,11 @@
             this.lbl_dob.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_dob.AutoSize = true;
             this.lbl_dob.Font = new System.Drawing.Font("Modern Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dob.Location = new System.Drawing.Point(109, 187);
+            this.lbl_dob.Location = new System.Drawing.Point(105, 187);
             this.lbl_dob.Name = "lbl_dob";
             this.lbl_dob.Size = new System.Drawing.Size(36, 15);
             this.lbl_dob.TabIndex = 13;
             this.lbl_dob.Text = "DOB:";
-            // 
-            // txt_dob
-            // 
-            this.txt_dob.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_dob.Location = new System.Drawing.Point(151, 182);
-            this.txt_dob.Name = "txt_dob";
-            this.txt_dob.Size = new System.Drawing.Size(112, 20);
-            this.txt_dob.TabIndex = 14;
             // 
             // label2
             // 
@@ -185,10 +176,17 @@
             // 
             this.txt_rollno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_rollno.Location = new System.Drawing.Point(512, 129);
-            this.txt_rollno.MaxLength = 20;
+            this.txt_rollno.MaxLength = 2;
             this.txt_rollno.Name = "txt_rollno";
             this.txt_rollno.Size = new System.Drawing.Size(33, 20);
             this.txt_rollno.TabIndex = 16;
+            // 
+            // txt_dob
+            // 
+            this.txt_dob.Location = new System.Drawing.Point(146, 184);
+            this.txt_dob.Name = "txt_dob";
+            this.txt_dob.Size = new System.Drawing.Size(200, 20);
+            this.txt_dob.TabIndex = 17;
             // 
             // std_data
             // 
@@ -197,9 +195,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(682, 300);
+            this.Controls.Add(this.txt_dob);
             this.Controls.Add(this.txt_rollno);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_dob);
             this.Controls.Add(this.lbl_dob);
             this.Controls.Add(this.txt_age);
             this.Controls.Add(this.lbl_age);
@@ -234,8 +232,8 @@
         private System.Windows.Forms.Label lbl_age;
         private System.Windows.Forms.TextBox txt_age;
         private System.Windows.Forms.Label lbl_dob;
-        private System.Windows.Forms.TextBox txt_dob;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_rollno;
+        private System.Windows.Forms.DateTimePicker txt_dob;
     }
 }

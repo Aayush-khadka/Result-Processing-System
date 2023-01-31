@@ -158,7 +158,7 @@
             this.Data_View.Location = new System.Drawing.Point(213, 101);
             this.Data_View.Name = "Data_View";
             this.Data_View.ReadOnly = true;
-            this.Data_View.Size = new System.Drawing.Size(282, 439);
+            this.Data_View.Size = new System.Drawing.Size(282, 416);
             this.Data_View.TabIndex = 11;
             // 
             // Roll
