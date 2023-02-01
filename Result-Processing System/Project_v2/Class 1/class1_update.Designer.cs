@@ -92,9 +92,9 @@
             // Panl_Edit
             // 
             this.Panl_Edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Panl_Edit.Location = new System.Drawing.Point(1, 94);
+            this.Panl_Edit.Location = new System.Drawing.Point(3, 83);
             this.Panl_Edit.Name = "Panl_Edit";
-            this.Panl_Edit.Size = new System.Drawing.Size(848, 385);
+            this.Panl_Edit.Size = new System.Drawing.Size(841, 385);
             this.Panl_Edit.TabIndex = 14;
             // 
             // shapeContainer1

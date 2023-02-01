@@ -20,7 +20,7 @@ namespace Project_v2
         {
             string username = txt_user.Text;
             string password = txt_pass.Text;
-            if (username == "Aayush" && password == "Aayush123")
+            if (username == "admin" && password == "admin")
             {
                 Selection ab = new Selection();
                 ab.Show();
@@ -28,7 +28,7 @@ namespace Project_v2
             }
             else
             {
-                MessageBox.Show("Incorrect Username or Password");
+                MessageBox.Show("Incorrect Username or Password","Error",MessageBoxButtons.OK,MessageBoxIcon.Stop);
                 txt_pass.Clear();
                 txt_user.Clear();
             }

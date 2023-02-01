@@ -221,7 +221,7 @@ namespace Project_v2
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = conn;
 
-                         double Total_gpa;
+            double Total_gpa;
            
 
             if (maths_grade=="NG" || social_grade=="NG" || nepali_grade=="NG"||english_grade=="NG"||science_grade=="NG"||gk_grade=="NG"||drawing_grade=="NG")

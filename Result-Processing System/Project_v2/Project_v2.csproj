@@ -81,23 +81,17 @@
     <Compile Include="Class 1\class1_view.Designer.cs">
       <DependentUpon>class1_view.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="form1.Designer.cs">
+      <DependentUpon>form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Insert_class1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Insert_class1.Designer.cs">
       <DependentUpon>Insert_class1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Class 1\class1_insert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Class 1\class1_insert.Designer.cs">
-      <DependentUpon>class1_insert.cs</DependentUpon>
     </Compile>
     <Compile Include="Class 1\class1_print.cs">
       <SubType>Form</SubType>
@@ -125,6 +119,12 @@
     <Compile Include="Class 1\class1_data.Designer.cs">
       <DependentUpon>class1_data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class 1\std_marks_enter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class 1\std_marks_enter.Designer.cs">
+      <DependentUpon>std_marks_enter.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Class 1\class1.resx">
       <DependentUpon>class1.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,14 +140,11 @@
     <EmbeddedResource Include="Class 1\class1_view.resx">
       <DependentUpon>class1_view.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="form1.resx">
+      <DependentUpon>form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Insert_class1.resx">
       <DependentUpon>Insert_class1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Class 1\class1_insert.resx">
-      <DependentUpon>class1_insert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Class 1\class1_print.resx">
       <DependentUpon>class1_print.cs</DependentUpon>
@@ -169,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Class 1\class1_data.resx">
       <DependentUpon>class1_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class 1\std_marks_enter.resx">
+      <DependentUpon>std_marks_enter.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

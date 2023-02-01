@@ -486,7 +486,7 @@
             this.Column27,
             this.Column25,
             this.Column26});
-            this.data_view.Location = new System.Drawing.Point(12, 210);
+            this.data_view.Location = new System.Drawing.Point(2, 211);
             this.data_view.Name = "data_view";
             this.data_view.ReadOnly = true;
             this.data_view.Size = new System.Drawing.Size(795, 280);

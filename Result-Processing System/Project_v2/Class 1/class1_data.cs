@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+//Using System.IO;
 
 namespace Project_v2
 {
     public partial class std_data : Form
     {
+        // satic string path = Path.GetFullPath("database.mdb");
         OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Database\Database.mdb'");
         public std_data()
 
@@ -29,33 +31,19 @@ namespace Project_v2
             string dob = txt_dob.Text;
             string age = txt_age.Text;
             string roll = txt_rollno.Text;
-            conn.Open();
 
+            conn.Open();
             cmd.CommandText = "INSERT INTO Std_Data (Roll_no,f_name,l_name,age,DOB,phone) VALUES('" + roll + "','" + f_name + "','" + l_name + "','" + age + "','" + dob + "','" + phone + "')";
             cmd.ExecuteNonQuery();
-            cmd.CommandText = "INSERT INTO class_1 (roll_no) VALUES('" + roll + "')";
-            cmd.ExecuteNonQuery();
-
+            txt_fname.Clear();
+            txt_lname.Clear();
+            txt_phone.Clear();
+            txt_dob.Clear();
+            txt_age.Clear();
+            txt_rollno.Clear();
             MessageBox.Show("Data Inserted");
-            Action<Control.ControlCollection> func = null;
-
-            func = (controls) =>
-            {
-                foreach (Control control in controls)
-                    if (control is TextBox)
-                        (control as TextBox).Clear();
-                    else
-                        func(control.Controls);
-            };
-            func(Controls);
             conn.Close();
 
         }
-
-        private void std_data_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

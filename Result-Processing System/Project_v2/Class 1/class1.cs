@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using System.IO;
 namespace Project_v2
 {
     public partial class class1 : Form
@@ -33,7 +33,7 @@ namespace Project_v2
         public void btn_insert_Click(object sender, EventArgs e)
         {
             one_form.Controls.Clear();
-            Insert_Class_One insert = new Insert_Class_One() { TopLevel = false, TopMost = true };
+            std_marks_enter insert = new std_marks_enter () { TopLevel = false, TopMost = true };
             one_form.Controls.Add(insert);
             insert.Show();
             insert.Dock = DockStyle.Fill;
@@ -81,7 +81,5 @@ namespace Project_v2
             this.Hide();
             ret.Show();
         }
-
-
     }
 }

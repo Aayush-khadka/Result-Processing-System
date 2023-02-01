@@ -215,6 +215,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Edit_std_data";
             this.Text = "Edit_std_data";
+            this.Load += new System.EventHandler(this.Edit_std_data_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

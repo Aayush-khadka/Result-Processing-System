@@ -41,7 +41,7 @@
             this.lbl_dob = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_rollno = new System.Windows.Forms.TextBox();
-            this.txt_dob = new System.Windows.Forms.DateTimePicker();
+            this.txt_dob = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -183,9 +183,11 @@
             // 
             // txt_dob
             // 
-            this.txt_dob.Location = new System.Drawing.Point(146, 184);
+            this.txt_dob.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_dob.Location = new System.Drawing.Point(151, 185);
+            this.txt_dob.MaxLength = 10;
             this.txt_dob.Name = "txt_dob";
-            this.txt_dob.Size = new System.Drawing.Size(200, 20);
+            this.txt_dob.Size = new System.Drawing.Size(112, 20);
             this.txt_dob.TabIndex = 17;
             // 
             // std_data
@@ -213,7 +215,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "std_data";
             this.Text = "std_data";
-            this.Load += new System.EventHandler(this.std_data_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,6 +235,6 @@
         private System.Windows.Forms.Label lbl_dob;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_rollno;
-        private System.Windows.Forms.DateTimePicker txt_dob;
+        private System.Windows.Forms.TextBox txt_dob;
     }
 }

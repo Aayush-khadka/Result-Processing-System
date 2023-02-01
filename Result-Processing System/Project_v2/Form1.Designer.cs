@@ -111,7 +111,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(107, 104);
+            this.groupBox1.Location = new System.Drawing.Point(88, 102);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(269, 203);
             this.groupBox1.TabIndex = 0;
@@ -146,7 +146,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(30)))), ((int)(((byte)(103)))));
-            this.label3.Location = new System.Drawing.Point(118, 64);
+            this.label3.Location = new System.Drawing.Point(108, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 17);
             this.label3.TabIndex = 1;
@@ -156,7 +156,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(41, 22);
+            this.pictureBox3.Location = new System.Drawing.Point(26, 21);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(74, 75);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -169,7 +169,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(30)))), ((int)(((byte)(103)))));
-            this.label4.Location = new System.Drawing.Point(116, 36);
+            this.label4.Location = new System.Drawing.Point(106, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(293, 28);
             this.label4.TabIndex = 3;
@@ -183,7 +183,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(86)))), ((int)(((byte)(210)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(461, 374);
+            this.ClientSize = new System.Drawing.Size(435, 374);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label3);

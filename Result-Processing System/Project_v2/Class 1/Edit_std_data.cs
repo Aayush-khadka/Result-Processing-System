@@ -23,18 +23,26 @@ namespace Project_v2
         
         private void btn_retrive_Click(object sender, EventArgs e)
         {
-            int num=int.Parse(txt_rollno.Text);
-            int roll = num - 1;
             string sql = "Select * from Std_Data";
             OleDbCommand cmmd = new OleDbCommand(sql, conn);
             DataSet ds = new DataSet();
             OleDbDataAdapter daa = new OleDbDataAdapter(cmmd);
             daa.Fill(ds);
-            txt_fname.Text= ds.Tables[0].Rows[roll]["f_name"].ToString();
-            txt_lname.Text = ds.Tables[0].Rows[roll]["l_name"].ToString();
-            txt_age.Text = ds.Tables[0].Rows[roll]["age"].ToString();
-            txt_phone.Text = ds.Tables[0].Rows[roll]["phone"].ToString();
-            txt_dob.Text = ds.Tables[0].Rows[roll]["DOB"].ToString();
+            int a = ds.Tables[0].Rows.Count;
+            int num=int.Parse(txt_rollno.Text);
+            int roll = num - 1;
+            if (num <= a)
+            {
+                txt_fname.Text = ds.Tables[0].Rows[roll]["f_name"].ToString();
+                txt_lname.Text = ds.Tables[0].Rows[roll]["l_name"].ToString();
+                txt_age.Text = ds.Tables[0].Rows[roll]["age"].ToString();
+                txt_phone.Text = ds.Tables[0].Rows[roll]["phone"].ToString();
+                txt_dob.Text = ds.Tables[0].Rows[roll]["DOB"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("Unable to find Roll no ' " + txt_rollno.Text + " '", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            } 
             
         }
 
@@ -61,6 +69,11 @@ namespace Project_v2
             txt_age.Clear(); 
             txt_phone.Clear();
             txt_dob.Clear(); 
+        }
+
+        private void Edit_std_data_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
