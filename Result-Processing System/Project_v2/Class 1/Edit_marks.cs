@@ -169,167 +169,187 @@ namespace Project_v2
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            string sql = "Select * from Class_1";
-            OleDbCommand cmmd = new OleDbCommand(sql, conn);
-            DataSet ds = new DataSet();
-            OleDbDataAdapter daa = new OleDbDataAdapter(cmmd);
-            daa.Fill(ds);
-            int a = ds.Tables[0].Rows.Count;
-            int num = int.Parse(txt_rollno.Text);
-            int roll = num - 1;
-
-            if (num <= a)
+            if (txt_rollno.Text!="")
             {
-                txt_english.Text = ds.Tables[0].Rows[roll]["n_english"].ToString();
-                txt_social.Text = ds.Tables[0].Rows[roll]["n_social"].ToString();
-                txt_nepali.Text = ds.Tables[0].Rows[roll]["n_nepali"].ToString();
-                txt_gk.Text = ds.Tables[0].Rows[roll]["n_gk"].ToString();
-                txt_drawing.Text = ds.Tables[0].Rows[roll]["n_drawing"].ToString();
-                txt_science.Text = ds.Tables[0].Rows[roll]["n_science"].ToString();
-                txt_maths.Text = ds.Tables[0].Rows[roll]["n_maths"].ToString();
-                txt_Attendance.Text = ds.Tables[0].Rows[roll]["Attendance"].ToString();
+                string sql = "Select * from Class_1";
+                OleDbCommand cmmd = new OleDbCommand(sql, conn);
+                DataSet ds = new DataSet();
+                OleDbDataAdapter daa = new OleDbDataAdapter(cmmd);
+                daa.Fill(ds);
+                int a = ds.Tables[0].Rows.Count;
+                int num = int.Parse(txt_rollno.Text);
+                int roll = num - 1;
+
+                if (num <= a)
+                {
+                    txt_english.Text = ds.Tables[0].Rows[roll]["n_english"].ToString();
+                    txt_social.Text = ds.Tables[0].Rows[roll]["n_social"].ToString();
+                    txt_nepali.Text = ds.Tables[0].Rows[roll]["n_nepali"].ToString();
+                    txt_gk.Text = ds.Tables[0].Rows[roll]["n_gk"].ToString();
+                    txt_drawing.Text = ds.Tables[0].Rows[roll]["n_drawing"].ToString();
+                    txt_science.Text = ds.Tables[0].Rows[roll]["n_science"].ToString();
+                    txt_maths.Text = ds.Tables[0].Rows[roll]["n_maths"].ToString();
+                    txt_Attendance.Text = ds.Tables[0].Rows[roll]["Attendance"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Unable to find Roll no ' " + txt_rollno.Text + " '", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
+
             else
             {
-                MessageBox.Show("Unable to find Roll no ' " + txt_rollno.Text+" '", "Not Found",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-            } 
+                MessageBox.Show("Empty Fields", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            
             
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int num_maths = int.Parse(txt_maths.Text);
-            int num_science = int.Parse(txt_science.Text);
-            int num_english = int.Parse(txt_english.Text);
-            int num_nepali = int.Parse(txt_nepali.Text);
-            int num_social = int.Parse(txt_social.Text);
-            int num_gk = int.Parse(txt_gk.Text);
-            int num_drawing = int.Parse(txt_drawing.Text);
-
-            int Attendance = int.Parse(txt_Attendance.Text);
-
-
-
-            if (num_maths < 100 && num_science < 100 && num_english < 100 && num_nepali < 100 && num_social < 100 && num_gk < 50 && num_drawing < 50)
+            if (txt_english.Text != "" && txt_maths.Text != "" && txt_nepali.Text != "" && txt_science.Text != "" && txt_social.Text != "" && txt_drawing.Text != "")
             {
-                string maths_grade = grade_check(num_maths);
-                string social_grade = grade_check(num_social);
-                string nepali_grade = grade_check(num_nepali);
-                string english_grade = grade_check(num_english);
-                string science_grade = grade_check(num_science);
-                string gk_grade = grade_check50(num_gk);
-                string drawing_grade = grade_check50(num_drawing);
+                int num_maths = int.Parse(txt_maths.Text);
+                int num_science = int.Parse(txt_science.Text);
+                int num_english = int.Parse(txt_english.Text);
+                int num_nepali = int.Parse(txt_nepali.Text);
+                int num_social = int.Parse(txt_social.Text);
+                int num_gk = int.Parse(txt_gk.Text);
+                int num_drawing = int.Parse(txt_drawing.Text);
 
-                double maths_gpa = sub_gpa(maths_grade);
-                double social_gpa = sub_gpa(social_grade);
-                double nepali_gpa = sub_gpa(nepali_grade);
-                double english_gpa = sub_gpa(english_grade);
-                double science_gpa = sub_gpa(science_grade);
-                double gk_gpa = sub_gpa(gk_grade);
-                double drawing_gpa = sub_gpa(drawing_grade);
-
-                double tot_obtained = (num_english + num_maths + num_nepali + num_science + num_social + num_gk + num_drawing);
-                double Total_gpa;
-                Total_gpa = gpa_check(tot_obtained);
-
-                int num = int.Parse(txt_rollno.Text);
-                int roll = num;
-
-                conn.Open();
-                OleDbCommand cmd = new OleDbCommand();
-                cmd.Connection = conn;
+                int Attendance = int.Parse(txt_Attendance.Text);
 
 
-                if (maths_grade == "NG" || social_grade == "NG" || nepali_grade == "NG" || english_grade == "NG" || science_grade == "NG" || gk_grade == "NG" || drawing_grade == "NG")
+
+                if (num_maths < 100 && num_science < 100 && num_english < 100 && num_nepali < 100 && num_social < 100 && num_gk < 50 && num_drawing < 50)
                 {
-                    string Total_gpa2 = "NG";
-                    cmd.CommandText = @"Update Class_1 SET n_maths =@n_maths,g_maths=@g_maths,gp_maths=@gp_maths,n_science =@n_science,g_science=@g_science,gp_science=@gp_science,n_english=@n_english,g_english=@g_english,gp_english=@gp_english,n_nepali=@n_nepali,g_nepali=@g_nepali,gp_nepali=@gp_nepali,n_social=@n_social,g_social=@g_social,gp_social=@gp_social,n_drawing=@n_drawing,g_drawing=@g_drawing,gp_drawing=@gp_drawing,n_gk=@n_gk,g_gk=@g_gk,gp_gk=@gp_gk,total_marks=@total_marks,final_gpa=@final_gpa,Attendance=@Attendance where roll_no=@roll";
-                    cmd.Parameters.AddWithValue("@n_maths", num_maths);
-                    cmd.Parameters.AddWithValue("@g_maths", maths_grade);
-                    cmd.Parameters.AddWithValue("@gp_maths", maths_gpa);
+                    string maths_grade = grade_check(num_maths);
+                    string social_grade = grade_check(num_social);
+                    string nepali_grade = grade_check(num_nepali);
+                    string english_grade = grade_check(num_english);
+                    string science_grade = grade_check(num_science);
+                    string gk_grade = grade_check50(num_gk);
+                    string drawing_grade = grade_check50(num_drawing);
 
-                    cmd.Parameters.AddWithValue("@n_science", num_science);
-                    cmd.Parameters.AddWithValue("@g_science", science_grade);
-                    cmd.Parameters.AddWithValue("@gp_science", science_gpa);
+                    double maths_gpa = sub_gpa(maths_grade);
+                    double social_gpa = sub_gpa(social_grade);
+                    double nepali_gpa = sub_gpa(nepali_grade);
+                    double english_gpa = sub_gpa(english_grade);
+                    double science_gpa = sub_gpa(science_grade);
+                    double gk_gpa = sub_gpa(gk_grade);
+                    double drawing_gpa = sub_gpa(drawing_grade);
 
-                    cmd.Parameters.AddWithValue("@n_english", num_english);
-                    cmd.Parameters.AddWithValue("@g_english", english_grade);
-                    cmd.Parameters.AddWithValue("@gp_english", english_gpa);
+                    double tot_obtained = (num_english + num_maths + num_nepali + num_science + num_social + num_gk + num_drawing);
+                    double Total_gpa;
+                    Total_gpa = gpa_check(tot_obtained);
 
-                    cmd.Parameters.AddWithValue("@n_nepali", num_nepali);
-                    cmd.Parameters.AddWithValue("@g_nepali", nepali_grade);
-                    cmd.Parameters.AddWithValue("@gp_nepali", nepali_gpa);
+                    int num = int.Parse(txt_rollno.Text);
+                    int roll = num;
 
-                    cmd.Parameters.AddWithValue("@n_social", num_social);
-                    cmd.Parameters.AddWithValue("@g_social", social_grade);
-                    cmd.Parameters.AddWithValue("@gp_social", social_gpa);
+                    conn.Open();
+                    OleDbCommand cmd = new OleDbCommand();
+                    cmd.Connection = conn;
 
-                    cmd.Parameters.AddWithValue("@n_drawing", num_drawing);
-                    cmd.Parameters.AddWithValue("@g_drawing", drawing_grade);
-                    cmd.Parameters.AddWithValue("@gp_drawing", drawing_gpa);
 
-                    cmd.Parameters.AddWithValue("@n_gk", num_gk);
-                    cmd.Parameters.AddWithValue("@g_gk", gk_grade);
-                    cmd.Parameters.AddWithValue("@gp_gk", gk_gpa);
+                    if (maths_grade == "NG" || social_grade == "NG" || nepali_grade == "NG" || english_grade == "NG" || science_grade == "NG" || gk_grade == "NG" || drawing_grade == "NG")
+                    {
+                        string Total_gpa2 = "NG";
+                        cmd.CommandText = @"Update Class_1 SET n_maths =@n_maths,g_maths=@g_maths,gp_maths=@gp_maths,n_science =@n_science,g_science=@g_science,gp_science=@gp_science,n_english=@n_english,g_english=@g_english,gp_english=@gp_english,n_nepali=@n_nepali,g_nepali=@g_nepali,gp_nepali=@gp_nepali,n_social=@n_social,g_social=@g_social,gp_social=@gp_social,n_drawing=@n_drawing,g_drawing=@g_drawing,gp_drawing=@gp_drawing,n_gk=@n_gk,g_gk=@g_gk,gp_gk=@gp_gk,total_marks=@total_marks,final_gpa=@final_gpa,Attendance=@Attendance where roll_no=@roll";
+                        cmd.Parameters.AddWithValue("@n_maths", num_maths);
+                        cmd.Parameters.AddWithValue("@g_maths", maths_grade);
+                        cmd.Parameters.AddWithValue("@gp_maths", maths_gpa);
 
-                    cmd.Parameters.AddWithValue("total_marks", tot_obtained);
-                    cmd.Parameters.AddWithValue("@final_gpa", Total_gpa2);
-                    cmd.Parameters.AddWithValue("@Attendance", Attendance);
-                    cmd.Parameters.AddWithValue("@roll", roll);
-                    cmd.ExecuteNonQuery();
+                        cmd.Parameters.AddWithValue("@n_science", num_science);
+                        cmd.Parameters.AddWithValue("@g_science", science_grade);
+                        cmd.Parameters.AddWithValue("@gp_science", science_gpa);
 
+                        cmd.Parameters.AddWithValue("@n_english", num_english);
+                        cmd.Parameters.AddWithValue("@g_english", english_grade);
+                        cmd.Parameters.AddWithValue("@gp_english", english_gpa);
+
+                        cmd.Parameters.AddWithValue("@n_nepali", num_nepali);
+                        cmd.Parameters.AddWithValue("@g_nepali", nepali_grade);
+                        cmd.Parameters.AddWithValue("@gp_nepali", nepali_gpa);
+
+                        cmd.Parameters.AddWithValue("@n_social", num_social);
+                        cmd.Parameters.AddWithValue("@g_social", social_grade);
+                        cmd.Parameters.AddWithValue("@gp_social", social_gpa);
+
+                        cmd.Parameters.AddWithValue("@n_drawing", num_drawing);
+                        cmd.Parameters.AddWithValue("@g_drawing", drawing_grade);
+                        cmd.Parameters.AddWithValue("@gp_drawing", drawing_gpa);
+
+                        cmd.Parameters.AddWithValue("@n_gk", num_gk);
+                        cmd.Parameters.AddWithValue("@g_gk", gk_grade);
+                        cmd.Parameters.AddWithValue("@gp_gk", gk_gpa);
+
+                        cmd.Parameters.AddWithValue("total_marks", tot_obtained);
+                        cmd.Parameters.AddWithValue("@final_gpa", Total_gpa2);
+                        cmd.Parameters.AddWithValue("@Attendance", Attendance);
+                        cmd.Parameters.AddWithValue("@roll", roll);
+                        cmd.ExecuteNonQuery();
+
+                    }
+
+                    else
+                    {
+                        cmd.CommandText = @"Update Class_1 SET n_maths =@n_maths,g_maths=@g_maths,gp_maths=@gp_maths,n_science =@n_science,g_science=@g_science,gp_science=@gp_science,n_english=@n_english,g_english=@g_english,gp_english=@gp_english,n_nepali=@n_nepali,g_nepali=@g_nepali,gp_nepali=@gp_nepali,n_social=@n_social,g_social=@g_social,gp_social=@gp_social,n_drawing=@n_drawing,g_drawing=@g_drawing,gp_drawing=@gp_drawing,n_gk=@n_gk,g_gk=@g_gk,gp_gk=@gp_gk,total_marks=@total_marks,final_gpa=@final_gpa,Attendance=@Attendance where roll_no=@roll";
+                        cmd.Parameters.AddWithValue("@n_maths", num_maths);
+                        cmd.Parameters.AddWithValue("@g_maths", maths_grade);
+                        cmd.Parameters.AddWithValue("@gp_maths", maths_gpa);
+
+                        cmd.Parameters.AddWithValue("@n_science", num_science);
+                        cmd.Parameters.AddWithValue("@g_science", science_grade);
+                        cmd.Parameters.AddWithValue("@gp_science", science_gpa);
+
+                        cmd.Parameters.AddWithValue("@n_english", num_english);
+                        cmd.Parameters.AddWithValue("@g_english", english_grade);
+                        cmd.Parameters.AddWithValue("@gp_english", english_gpa);
+
+                        cmd.Parameters.AddWithValue("@n_nepali", num_nepali);
+                        cmd.Parameters.AddWithValue("@g_nepali", nepali_grade);
+                        cmd.Parameters.AddWithValue("@gp_nepali", nepali_gpa);
+
+                        cmd.Parameters.AddWithValue("@n_social", num_social);
+                        cmd.Parameters.AddWithValue("@g_social", social_grade);
+                        cmd.Parameters.AddWithValue("@gp_social", social_gpa);
+
+                        cmd.Parameters.AddWithValue("@n_drawing", num_drawing);
+                        cmd.Parameters.AddWithValue("@g_drawing", drawing_grade);
+                        cmd.Parameters.AddWithValue("@gp_drawing", drawing_gpa);
+
+                        cmd.Parameters.AddWithValue("@n_gk", num_gk);
+                        cmd.Parameters.AddWithValue("@g_gk", gk_grade);
+                        cmd.Parameters.AddWithValue("@gp_gk", gk_gpa);
+
+                        cmd.Parameters.AddWithValue("total_marks", tot_obtained);
+                        cmd.Parameters.AddWithValue("@final_gpa", Total_gpa);
+                        cmd.Parameters.AddWithValue("@Attendance", Attendance);
+                        cmd.Parameters.AddWithValue("@roll", roll);
+                        cmd.ExecuteNonQuery();
+                    }
+                    conn.Close();
+                    MessageBox.Show("Data Updated:");
+                    txt_maths.Clear();
+                    txt_science.Clear();
+                    txt_english.Clear();
+                    txt_nepali.Clear();
+                    txt_social.Clear();
+                    txt_gk.Clear();
+                    txt_drawing.Clear();
+                    txt_Attendance.Clear();
                 }
-
-                else
-                {
-                    cmd.CommandText = @"Update Class_1 SET n_maths =@n_maths,g_maths=@g_maths,gp_maths=@gp_maths,n_science =@n_science,g_science=@g_science,gp_science=@gp_science,n_english=@n_english,g_english=@g_english,gp_english=@gp_english,n_nepali=@n_nepali,g_nepali=@g_nepali,gp_nepali=@gp_nepali,n_social=@n_social,g_social=@g_social,gp_social=@gp_social,n_drawing=@n_drawing,g_drawing=@g_drawing,gp_drawing=@gp_drawing,n_gk=@n_gk,g_gk=@g_gk,gp_gk=@gp_gk,total_marks=@total_marks,final_gpa=@final_gpa,Attendance=@Attendance where roll_no=@roll";
-                    cmd.Parameters.AddWithValue("@n_maths", num_maths);
-                    cmd.Parameters.AddWithValue("@g_maths", maths_grade);
-                    cmd.Parameters.AddWithValue("@gp_maths", maths_gpa);
-
-                    cmd.Parameters.AddWithValue("@n_science", num_science);
-                    cmd.Parameters.AddWithValue("@g_science", science_grade);
-                    cmd.Parameters.AddWithValue("@gp_science", science_gpa);
-
-                    cmd.Parameters.AddWithValue("@n_english",num_english);
-                    cmd.Parameters.AddWithValue("@g_english",english_grade);
-                    cmd.Parameters.AddWithValue("@gp_english",english_gpa);
-
-                    cmd.Parameters.AddWithValue("@n_nepali",num_nepali);
-                    cmd.Parameters.AddWithValue("@g_nepali",nepali_grade);
-                    cmd.Parameters.AddWithValue("@gp_nepali",nepali_gpa);
-
-                    cmd.Parameters.AddWithValue("@n_social",num_social);
-                    cmd.Parameters.AddWithValue("@g_social",social_grade);
-                    cmd.Parameters.AddWithValue("@gp_social",social_gpa);
-
-                    cmd.Parameters.AddWithValue("@n_drawing",num_drawing);
-                    cmd.Parameters.AddWithValue("@g_drawing",drawing_grade);
-                    cmd.Parameters.AddWithValue("@gp_drawing",drawing_gpa);
-
-                    cmd.Parameters.AddWithValue("@n_gk", num_gk);
-                    cmd.Parameters.AddWithValue("@g_gk", gk_grade);
-                    cmd.Parameters.AddWithValue("@gp_gk", gk_gpa);
-
-                    cmd.Parameters.AddWithValue("total_marks", tot_obtained);
-                    cmd.Parameters.AddWithValue("@final_gpa", Total_gpa);
-                    cmd.Parameters.AddWithValue("@Attendance", Attendance);
-                    cmd.Parameters.AddWithValue("@roll",roll);
-                    cmd.ExecuteNonQuery();
-                }
-                conn.Close();
-                MessageBox.Show("Data Updated:");
-                txt_maths.Clear();
-                txt_science.Clear();
-                txt_english.Clear();
-                txt_nepali.Clear();
-                txt_social.Clear();
-                txt_gk.Clear();
-                txt_drawing.Clear();
-                txt_Attendance.Clear();
             }
+
+            else
+            {
+                MessageBox.Show("Empty Fields", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+
+
         }
 
     }

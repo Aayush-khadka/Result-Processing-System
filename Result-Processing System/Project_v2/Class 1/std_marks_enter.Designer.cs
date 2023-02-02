@@ -45,11 +45,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_num = new System.Windows.Forms.Label();
             this.lbl_std_name = new System.Windows.Forms.Label();
             this.lbl_rollno = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.txt_roll = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_Attendance
@@ -227,17 +227,6 @@
             this.label1.TabIndex = 114;
             this.label1.Text = "Maths:";
             // 
-            // lbl_num
-            // 
-            this.lbl_num.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_num.AutoSize = true;
-            this.lbl_num.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_num.Location = new System.Drawing.Point(323, 106);
-            this.lbl_num.Name = "lbl_num";
-            this.lbl_num.Size = new System.Drawing.Size(34, 15);
-            this.lbl_num.TabIndex = 113;
-            this.lbl_num.Text = "Num";
-            // 
             // lbl_std_name
             // 
             this.lbl_std_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -283,11 +272,21 @@
             this.label9.TabIndex = 131;
             this.label9.Text = "Enter Marks ";
             // 
+            // txt_roll
+            // 
+            this.txt_roll.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_roll.Location = new System.Drawing.Point(320, 105);
+            this.txt_roll.MaxLength = 3;
+            this.txt_roll.Name = "txt_roll";
+            this.txt_roll.Size = new System.Drawing.Size(20, 20);
+            this.txt_roll.TabIndex = 132;
+            // 
             // std_marks_enter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 461);
+            this.Controls.Add(this.txt_roll);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_Attendance);
             this.Controls.Add(this.label8);
@@ -306,7 +305,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbl_num);
             this.Controls.Add(this.lbl_std_name);
             this.Controls.Add(this.lbl_rollno);
             this.Controls.Add(this.lbl_name);
@@ -337,11 +335,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_num;
         private System.Windows.Forms.Label lbl_std_name;
         private System.Windows.Forms.Label lbl_rollno;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_roll;
 
     }
 }

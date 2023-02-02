@@ -32,17 +32,43 @@ namespace Project_v2
             string age = txt_age.Text;
             string roll = txt_rollno.Text;
 
-            conn.Open();
-            cmd.CommandText = "INSERT INTO Std_Data (Roll_no,f_name,l_name,age,DOB,phone) VALUES('" + roll + "','" + f_name + "','" + l_name + "','" + age + "','" + dob + "','" + phone + "')";
-            cmd.ExecuteNonQuery();
-            txt_fname.Clear();
-            txt_lname.Clear();
-            txt_phone.Clear();
-            txt_dob.Clear();
-            txt_age.Clear();
-            txt_rollno.Clear();
-            MessageBox.Show("Data Inserted");
-            conn.Close();
+            if (f_name != "" && l_name != "" && phone != "" && dob != "" && age != "" && roll != "")
+            {
+                try
+                {
+                    conn.Open();
+                    cmd.CommandText = "INSERT INTO Std_Data (Roll_no,f_name,l_name,age,DOB,phone) VALUES('" + roll + "','" + f_name + "','" + l_name + "','" + age + "','" + dob + "','" + phone + "')";
+                    cmd.ExecuteNonQuery();
+                    txt_fname.Clear();
+                    txt_lname.Clear();
+                    txt_phone.Clear();
+                    txt_dob.Clear();
+                    txt_age.Clear();
+                    txt_rollno.Clear();
+                    MessageBox.Show("Data Inserted");
+                    conn.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Student with same Roll no already Added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+                
+            }
+
+            else
+            {
+                MessageBox.Show("Empty Fileds","Error",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                txt_fname.Clear();
+                txt_lname.Clear();
+                txt_phone.Clear();
+                txt_dob.Clear();
+                txt_age.Clear();
+                txt_rollno.Clear();
+            }
+
+
+            
 
         }
     }

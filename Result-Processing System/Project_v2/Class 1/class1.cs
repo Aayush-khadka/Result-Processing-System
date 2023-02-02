@@ -15,12 +15,6 @@ namespace Project_v2
         {
             InitializeComponent();
         }
-
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btn_add_Click(object sender, EventArgs e)
         {
             one_form.Controls.Clear();
