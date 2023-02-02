@@ -44,7 +44,7 @@
             this.btn_View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_View.Font = new System.Drawing.Font("Mosk Bold 700", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_View.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(231)))), ((int)(((byte)(177)))));
-            this.btn_View.Location = new System.Drawing.Point(253, 24);
+            this.btn_View.Location = new System.Drawing.Point(242, 12);
             this.btn_View.Name = "btn_View";
             this.btn_View.Size = new System.Drawing.Size(99, 29);
             this.btn_View.TabIndex = 10;
@@ -57,7 +57,7 @@
             this.lbl_fname.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_fname.AutoSize = true;
             this.lbl_fname.Font = new System.Drawing.Font("Modern Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fname.Location = new System.Drawing.Point(117, 33);
+            this.lbl_fname.Location = new System.Drawing.Point(106, 21);
             this.lbl_fname.Name = "lbl_fname";
             this.lbl_fname.Size = new System.Drawing.Size(130, 15);
             this.lbl_fname.TabIndex = 11;
@@ -68,7 +68,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(482, 33);
+            this.label1.Location = new System.Drawing.Point(471, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 15);
             this.label1.TabIndex = 12;
@@ -81,7 +81,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Mosk Bold 700", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(231)))), ((int)(((byte)(177)))));
-            this.button1.Location = new System.Drawing.Point(624, 26);
+            this.button1.Location = new System.Drawing.Point(613, 14);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 29);
             this.button1.TabIndex = 13;
@@ -92,9 +92,9 @@
             // Panl_Edit
             // 
             this.Panl_Edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Panl_Edit.Location = new System.Drawing.Point(3, 83);
+            this.Panl_Edit.Location = new System.Drawing.Point(3, 74);
             this.Panl_Edit.Name = "Panl_Edit";
-            this.Panl_Edit.Size = new System.Drawing.Size(841, 385);
+            this.Panl_Edit.Size = new System.Drawing.Size(841, 394);
             this.Panl_Edit.TabIndex = 14;
             // 
             // shapeContainer1
@@ -113,10 +113,10 @@
             this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 1;
-            this.lineShape1.X2 = 848;
-            this.lineShape1.Y1 = 72;
-            this.lineShape1.Y2 = 72;
+            this.lineShape1.X1 = 2;
+            this.lineShape1.X2 = 849;
+            this.lineShape1.Y1 = 57;
+            this.lineShape1.Y2 = 57;
             // 
             // Update
             // 

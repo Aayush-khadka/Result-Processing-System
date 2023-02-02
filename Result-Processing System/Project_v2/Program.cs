@@ -15,7 +15,7 @@ namespace Project_v2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new class1());
+            Application.Run(new Login());
         }
     }
 }

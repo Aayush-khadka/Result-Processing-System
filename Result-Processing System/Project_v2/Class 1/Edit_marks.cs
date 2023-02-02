@@ -178,6 +178,7 @@ namespace Project_v2
             int a = ds.Tables[0].Rows.Count;
             int num = int.Parse(txt_rollno.Text);
             int roll = num - 1;
+
             if (num <= a)
             {
                 txt_english.Text = ds.Tables[0].Rows[roll]["n_english"].ToString();
