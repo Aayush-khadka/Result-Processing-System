@@ -21,6 +21,11 @@ namespace Project_v2
             InitializeComponent();
         }
 
+        private void date_picker_ValueChanged(object sender, EventArgs e)
+        {
+            string b = date_picker.Text;
+        }
+
         private void btn_Submit_Click(object sender, EventArgs e)
         {
             OleDbCommand cmd = new OleDbCommand();
@@ -28,7 +33,7 @@ namespace Project_v2
             string f_name = txt_fname.Text;
             string l_name = txt_lname.Text;
             string phone = txt_phone.Text;
-            string dob = txt_dob.Text;
+            string dob = date_picker.Text;
             string age = txt_age.Text;
             string roll = txt_rollno.Text;
 
@@ -42,7 +47,7 @@ namespace Project_v2
                     txt_fname.Clear();
                     txt_lname.Clear();
                     txt_phone.Clear();
-                    txt_dob.Clear();
+                    date_picker.Text = string.Empty;
                     txt_age.Clear();
                     txt_rollno.Clear();
                     MessageBox.Show("Data Inserted");
@@ -62,7 +67,7 @@ namespace Project_v2
                 txt_fname.Clear();
                 txt_lname.Clear();
                 txt_phone.Clear();
-                txt_dob.Clear();
+                date_picker.Text = string.Empty;
                 txt_age.Clear();
                 txt_rollno.Clear();
             }
@@ -71,5 +76,8 @@ namespace Project_v2
             
 
         }
+
+
+
     }
 }

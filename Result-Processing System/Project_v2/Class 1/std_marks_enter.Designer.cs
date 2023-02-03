@@ -232,7 +232,7 @@
             this.lbl_std_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_std_name.AutoSize = true;
             this.lbl_std_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_std_name.Location = new System.Drawing.Point(155, 106);
+            this.lbl_std_name.Location = new System.Drawing.Point(155, 107);
             this.lbl_std_name.Name = "lbl_std_name";
             this.lbl_std_name.Size = new System.Drawing.Size(86, 15);
             this.lbl_std_name.TabIndex = 112;
@@ -254,7 +254,7 @@
             this.lbl_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_name.AutoSize = true;
             this.lbl_name.Font = new System.Drawing.Font("Modern Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.Location = new System.Drawing.Point(103, 106);
+            this.lbl_name.Location = new System.Drawing.Point(109, 108);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(46, 15);
             this.lbl_name.TabIndex = 110;
@@ -275,10 +275,10 @@
             // txt_roll
             // 
             this.txt_roll.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_roll.Location = new System.Drawing.Point(320, 105);
+            this.txt_roll.Location = new System.Drawing.Point(322, 104);
             this.txt_roll.MaxLength = 3;
             this.txt_roll.Name = "txt_roll";
-            this.txt_roll.Size = new System.Drawing.Size(20, 20);
+            this.txt_roll.Size = new System.Drawing.Size(19, 20);
             this.txt_roll.TabIndex = 132;
             // 
             // std_marks_enter

@@ -71,7 +71,7 @@
             // txt_dob
             // 
             this.txt_dob.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_dob.Location = new System.Drawing.Point(155, 208);
+            this.txt_dob.Location = new System.Drawing.Point(156, 208);
             this.txt_dob.Name = "txt_dob";
             this.txt_dob.Size = new System.Drawing.Size(112, 20);
             this.txt_dob.TabIndex = 43;
@@ -81,7 +81,7 @@
             this.lbl_dob.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_dob.AutoSize = true;
             this.lbl_dob.Font = new System.Drawing.Font("Modern Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dob.Location = new System.Drawing.Point(113, 213);
+            this.lbl_dob.Location = new System.Drawing.Point(109, 213);
             this.lbl_dob.Name = "lbl_dob";
             this.lbl_dob.Size = new System.Drawing.Size(36, 15);
             this.lbl_dob.TabIndex = 42;

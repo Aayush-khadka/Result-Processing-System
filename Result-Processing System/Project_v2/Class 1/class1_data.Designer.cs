@@ -41,7 +41,7 @@
             this.lbl_dob = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_rollno = new System.Windows.Forms.TextBox();
-            this.txt_dob = new System.Windows.Forms.TextBox();
+            this.date_picker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -85,7 +85,7 @@
             this.txt_fname.MaxLength = 10;
             this.txt_fname.Name = "txt_fname";
             this.txt_fname.Size = new System.Drawing.Size(112, 20);
-            this.txt_fname.TabIndex = 4;
+            this.txt_fname.TabIndex = 1;
             // 
             // txt_lname
             // 
@@ -94,7 +94,7 @@
             this.txt_lname.MaxLength = 10;
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(112, 20);
-            this.txt_lname.TabIndex = 5;
+            this.txt_lname.TabIndex = 2;
             // 
             // btn_Submit
             // 
@@ -105,7 +105,7 @@
             this.btn_Submit.Location = new System.Drawing.Point(554, 247);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(116, 38);
-            this.btn_Submit.TabIndex = 8;
+            this.btn_Submit.TabIndex = 7;
             this.btn_Submit.Text = "Save";
             this.btn_Submit.UseVisualStyleBackColor = false;
             this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
@@ -128,14 +128,14 @@
             this.txt_phone.MaxLength = 10;
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(112, 20);
-            this.txt_phone.TabIndex = 10;
+            this.txt_phone.TabIndex = 3;
             // 
             // lbl_age
             // 
             this.lbl_age.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_age.AutoSize = true;
             this.lbl_age.Font = new System.Drawing.Font("Modern Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_age.Location = new System.Drawing.Point(470, 182);
+            this.lbl_age.Location = new System.Drawing.Point(470, 187);
             this.lbl_age.Name = "lbl_age";
             this.lbl_age.Size = new System.Drawing.Size(36, 15);
             this.lbl_age.TabIndex = 11;
@@ -144,11 +144,11 @@
             // txt_age
             // 
             this.txt_age.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_age.Location = new System.Drawing.Point(512, 182);
+            this.txt_age.Location = new System.Drawing.Point(512, 187);
             this.txt_age.MaxLength = 2;
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(33, 20);
-            this.txt_age.TabIndex = 12;
+            this.txt_age.TabIndex = 6;
             // 
             // lbl_dob
             // 
@@ -179,16 +179,20 @@
             this.txt_rollno.MaxLength = 2;
             this.txt_rollno.Name = "txt_rollno";
             this.txt_rollno.Size = new System.Drawing.Size(33, 20);
-            this.txt_rollno.TabIndex = 16;
+            this.txt_rollno.TabIndex = 4;
             // 
-            // txt_dob
+            // date_picker
             // 
-            this.txt_dob.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_dob.Location = new System.Drawing.Point(151, 185);
-            this.txt_dob.MaxLength = 10;
-            this.txt_dob.Name = "txt_dob";
-            this.txt_dob.Size = new System.Drawing.Size(112, 20);
-            this.txt_dob.TabIndex = 17;
+            this.date_picker.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.date_picker.CustomFormat = "dd/MM/yyyy";
+            this.date_picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.date_picker.Location = new System.Drawing.Point(151, 187);
+            this.date_picker.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
+            this.date_picker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.date_picker.Name = "date_picker";
+            this.date_picker.Size = new System.Drawing.Size(116, 20);
+            this.date_picker.TabIndex = 19;
+            this.date_picker.ValueChanged += new System.EventHandler(this.date_picker_ValueChanged);
             // 
             // std_data
             // 
@@ -197,7 +201,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(682, 300);
-            this.Controls.Add(this.txt_dob);
             this.Controls.Add(this.txt_rollno);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_dob);
@@ -211,6 +214,7 @@
             this.Controls.Add(this.lbl_lname);
             this.Controls.Add(this.lbl_fname);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.date_picker);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "std_data";
@@ -235,6 +239,6 @@
         private System.Windows.Forms.Label lbl_dob;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_rollno;
-        private System.Windows.Forms.TextBox txt_dob;
+        private System.Windows.Forms.DateTimePicker date_picker;
     }
 }

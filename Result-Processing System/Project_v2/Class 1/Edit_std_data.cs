@@ -55,7 +55,7 @@ namespace Project_v2
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            if (txt_age.Text == "" && txt_dob.Text != "" && txt_phone.Text != "" && txt_fname.Text != "" && txt_lname.Text != "")
+            if (txt_age.Text != "" && txt_phone.Text != "" && txt_fname.Text != "" && txt_lname.Text != "")
             {
                 int num = int.Parse(txt_rollno.Text);
                 int roll = num;
