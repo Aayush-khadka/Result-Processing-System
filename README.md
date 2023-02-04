@@ -42,7 +42,7 @@ This application is developed in C# and employs Microsoft Access as its database
 
 ![image](https://user-images.githubusercontent.com/118432407/216778470-d6895868-6ef4-45bd-8c87-8c87ac575719.png)
 
--View 
+- View 
 
 
 
@@ -63,6 +63,8 @@ This application is developed in C# and employs Microsoft Access as its database
 
 
 
+## Result Printing
+The inserted Marks is Graded and can be inserted in to a pre-made Result Format. 
 
 
 
