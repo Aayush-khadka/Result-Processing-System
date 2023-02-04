@@ -29,9 +29,37 @@ This application is developed in C# and employs Microsoft Access as its database
 
 ![image](https://user-images.githubusercontent.com/118432407/216778357-147ac5cc-c4eb-424e-8b18-8301b1db33e6.png)
 
+- Update Student Data
 
 
 
+![image](https://user-images.githubusercontent.com/118432407/216778459-6966bfcf-8d14-433f-bce7-856feb65de35.png)
+
+-Update Student Marks
+
+
+
+
+![image](https://user-images.githubusercontent.com/118432407/216778470-d6895868-6ef4-45bd-8c87-8c87ac575719.png)
+
+-View 
+
+
+
+![image](https://user-images.githubusercontent.com/118432407/216778485-1f7a9aae-ab56-4eae-b9c2-ac3dc6743757.png)
+
+- Delete Data
+
+
+
+![image](https://user-images.githubusercontent.com/118432407/216778500-80c08d48-aa03-4bf1-9e8a-41bef179ca05.png)
+
+- Print Results 
+
+
+
+
+![image](https://user-images.githubusercontent.com/118432407/216778628-34da74cd-2818-4a8a-849d-3dffc05f155a.png)
 
 
 
