@@ -37,10 +37,13 @@
     <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,17 +84,17 @@
     <Compile Include="Class 1\class1_view.Designer.cs">
       <DependentUpon>class1_view.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class 1\dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class 1\dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="form1.Designer.cs">
       <DependentUpon>form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Insert_class1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Insert_class1.Designer.cs">
-      <DependentUpon>Insert_class1.cs</DependentUpon>
     </Compile>
     <Compile Include="Class 1\class1_print.cs">
       <SubType>Form</SubType>
@@ -140,11 +143,11 @@
     <EmbeddedResource Include="Class 1\class1_view.resx">
       <DependentUpon>class1_view.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Class 1\dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form1.resx">
       <DependentUpon>form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Insert_class1.resx">
-      <DependentUpon>Insert_class1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Class 1\class1_print.resx">
       <DependentUpon>class1_print.cs</DependentUpon>

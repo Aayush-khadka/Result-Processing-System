@@ -86,6 +86,7 @@
             this.txt_fname.Name = "txt_fname";
             this.txt_fname.Size = new System.Drawing.Size(112, 20);
             this.txt_fname.TabIndex = 1;
+            this.txt_fname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_fname_KeyPress);
             // 
             // txt_lname
             // 
@@ -95,6 +96,7 @@
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(112, 20);
             this.txt_lname.TabIndex = 2;
+            this.txt_lname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_lname_KeyPress);
             // 
             // btn_Submit
             // 
@@ -129,6 +131,7 @@
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(112, 20);
             this.txt_phone.TabIndex = 3;
+            this.txt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_phone_KeyPress);
             // 
             // lbl_age
             // 
@@ -149,6 +152,7 @@
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(33, 20);
             this.txt_age.TabIndex = 6;
+            this.txt_age.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_age_KeyPress);
             // 
             // lbl_dob
             // 
@@ -180,6 +184,7 @@
             this.txt_rollno.Name = "txt_rollno";
             this.txt_rollno.Size = new System.Drawing.Size(33, 20);
             this.txt_rollno.TabIndex = 4;
+            this.txt_rollno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_rollno_KeyPress);
             // 
             // date_picker
             // 

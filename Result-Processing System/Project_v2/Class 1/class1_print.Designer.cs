@@ -28,51 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_res_Print = new System.Windows.Forms.Button();
-            this.txt_no_std = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_Submit = new System.Windows.Forms.Button();
+            this.lbl_loading = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btn_res_Print
+            // label1
             // 
-            this.btn_res_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_res_Print.FlatAppearance.BorderSize = 3;
-            this.btn_res_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_res_Print.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_res_Print.Location = new System.Drawing.Point(290, 207);
-            this.btn_res_Print.Name = "btn_res_Print";
-            this.btn_res_Print.Size = new System.Drawing.Size(225, 48);
-            this.btn_res_Print.TabIndex = 0;
-            this.btn_res_Print.Text = "Print the Results";
-            this.btn_res_Print.UseVisualStyleBackColor = false;
-            this.btn_res_Print.Click += new System.EventHandler(this.btn_res_Print_Click);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Schluber", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
+            this.label1.Location = new System.Drawing.Point(53, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 33);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Print Result";
             // 
-            // txt_no_std
+            // btn_Submit
             // 
-            this.txt_no_std.Location = new System.Drawing.Point(432, 142);
-            this.txt_no_std.Name = "txt_no_std";
-            this.txt_no_std.Size = new System.Drawing.Size(38, 20);
-            this.txt_no_std.TabIndex = 7;
+            this.btn_Submit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_Submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(98)))), ((int)(((byte)(85)))));
+            this.btn_Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Submit.Font = new System.Drawing.Font("Mosk Bold 700", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Submit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(231)))), ((int)(((byte)(177)))));
+            this.btn_Submit.Location = new System.Drawing.Point(86, 76);
+            this.btn_Submit.Name = "btn_Submit";
+            this.btn_Submit.Size = new System.Drawing.Size(116, 38);
+            this.btn_Submit.TabIndex = 8;
+            this.btn_Submit.Text = "Print Results";
+            this.btn_Submit.UseVisualStyleBackColor = false;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
-            // label3
+            // lbl_loading
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(302, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 15);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "No of Student :";
+            this.lbl_loading.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_loading.AutoSize = true;
+            this.lbl_loading.Location = new System.Drawing.Point(91, 126);
+            this.lbl_loading.Name = "lbl_loading";
+            this.lbl_loading.Size = new System.Drawing.Size(0, 13);
+            this.lbl_loading.TabIndex = 9;
             // 
             // Print
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 358);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_no_std);
-            this.Controls.Add(this.btn_res_Print);
+            this.ClientSize = new System.Drawing.Size(301, 202);
+            this.Controls.Add(this.lbl_loading);
+            this.Controls.Add(this.btn_Submit);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Print";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -85,8 +89,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_res_Print;
-        private System.Windows.Forms.TextBox txt_no_std;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_Submit;
+        private System.Windows.Forms.Label lbl_loading;
     }
 }

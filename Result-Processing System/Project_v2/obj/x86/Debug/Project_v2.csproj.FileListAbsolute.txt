@@ -26,7 +26,6 @@ C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v
 C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.pdb
 C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.csprojResolveAssemblyReference.cache
 C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.class1.resources
-C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.Insert_class1.resources
 C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.Print.resources
 C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.Properties.Resources.resources
 C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.Selection.resources
@@ -41,3 +40,4 @@ C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v
 C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.class1_view.resources
 C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.std_marks_enter.resources
 C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.Login.resources
+C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Project_v2\obj\x86\Debug\Project_v2.dashboard.resources

@@ -156,7 +156,7 @@
             this.btn_class1.Location = new System.Drawing.Point(9, 70);
             this.btn_class1.Name = "btn_class1";
             this.btn_class1.Size = new System.Drawing.Size(209, 35);
-            this.btn_class1.TabIndex = 7;
+            this.btn_class1.TabIndex = 1;
             this.btn_class1.Text = "Class 1";
             this.btn_class1.UseVisualStyleBackColor = false;
             this.btn_class1.Click += new System.EventHandler(this.btn_class1_Click);

@@ -14,7 +14,13 @@ namespace Project_v2
         public class1()
         {
             InitializeComponent();
+            one_form.Controls.Clear();
+            dashboard dash = new dashboard() { TopLevel = false, TopMost = true };
+            one_form.Controls.Add(dash);
+            dash.Show();
+            dash.Dock = DockStyle.Fill;
         }
+
         private void btn_add_Click(object sender, EventArgs e)
         {
             one_form.Controls.Clear();
@@ -74,6 +80,21 @@ namespace Project_v2
             Selection ret = new Selection();
             this.Hide();
             ret.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            one_form.Controls.Clear();
+            dashboard dash = new dashboard() { TopLevel = false, TopMost = true };
+            one_form.Controls.Add(dash);
+            dash.Show();
+            dash.Dock = DockStyle.Fill;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

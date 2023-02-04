@@ -60,6 +60,7 @@
             this.txt_Attendance.Name = "txt_Attendance";
             this.txt_Attendance.Size = new System.Drawing.Size(33, 20);
             this.txt_Attendance.TabIndex = 130;
+            this.txt_Attendance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Attendance_KeyPress);
             // 
             // label8
             // 
@@ -95,6 +96,7 @@
             this.txt_gk.Name = "txt_gk";
             this.txt_gk.Size = new System.Drawing.Size(33, 20);
             this.txt_gk.TabIndex = 127;
+            this.txt_gk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_gk_KeyPress);
             // 
             // txt_drawing
             // 
@@ -104,6 +106,7 @@
             this.txt_drawing.Name = "txt_drawing";
             this.txt_drawing.Size = new System.Drawing.Size(33, 20);
             this.txt_drawing.TabIndex = 126;
+            this.txt_drawing.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_drawing_KeyPress);
             // 
             // txt_science
             // 
@@ -113,6 +116,7 @@
             this.txt_science.Name = "txt_science";
             this.txt_science.Size = new System.Drawing.Size(33, 20);
             this.txt_science.TabIndex = 125;
+            this.txt_science.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_science_KeyPress);
             // 
             // txt_nepali
             // 
@@ -122,6 +126,7 @@
             this.txt_nepali.Name = "txt_nepali";
             this.txt_nepali.Size = new System.Drawing.Size(33, 20);
             this.txt_nepali.TabIndex = 124;
+            this.txt_nepali.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nepali_KeyPress);
             // 
             // txt_social
             // 
@@ -131,6 +136,7 @@
             this.txt_social.Name = "txt_social";
             this.txt_social.Size = new System.Drawing.Size(33, 20);
             this.txt_social.TabIndex = 123;
+            this.txt_social.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_social_KeyPress);
             // 
             // txt_english
             // 
@@ -140,6 +146,7 @@
             this.txt_english.Name = "txt_english";
             this.txt_english.Size = new System.Drawing.Size(33, 20);
             this.txt_english.TabIndex = 122;
+            this.txt_english.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_english_KeyPress);
             // 
             // txt_maths
             // 
@@ -149,6 +156,7 @@
             this.txt_maths.Name = "txt_maths";
             this.txt_maths.Size = new System.Drawing.Size(33, 20);
             this.txt_maths.TabIndex = 121;
+            this.txt_maths.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_maths_KeyPress);
             // 
             // label7
             // 
@@ -280,6 +288,7 @@
             this.txt_roll.Name = "txt_roll";
             this.txt_roll.Size = new System.Drawing.Size(19, 20);
             this.txt_roll.TabIndex = 132;
+            this.txt_roll.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_rollno_KeyPress);
             // 
             // std_marks_enter
             // 

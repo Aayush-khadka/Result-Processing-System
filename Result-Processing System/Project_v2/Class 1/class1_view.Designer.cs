@@ -113,6 +113,7 @@
             this.txt_roll.Name = "txt_roll";
             this.txt_roll.Size = new System.Drawing.Size(33, 20);
             this.txt_roll.TabIndex = 127;
+            this.txt_roll.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_roll_KeyPress);
             // 
             // label2
             // 

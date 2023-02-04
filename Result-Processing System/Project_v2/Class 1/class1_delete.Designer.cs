@@ -97,7 +97,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 29);
             this.button1.TabIndex = 129;
-            this.button1.Text = "Delete";
+            this.button1.Text = "DELETE";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -109,6 +109,7 @@
             this.txt_roll.Name = "txt_roll";
             this.txt_roll.Size = new System.Drawing.Size(33, 20);
             this.txt_roll.TabIndex = 128;
+            this.txt_roll.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_roll_KeyPress);
             // 
             // lbl_fname
             // 
@@ -173,7 +174,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 29);
             this.button2.TabIndex = 130;
-            this.button2.Text = "Delete";
+            this.button2.Text = "DELETE";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -185,6 +186,7 @@
             this.txt_num.Name = "txt_num";
             this.txt_num.Size = new System.Drawing.Size(33, 20);
             this.txt_num.TabIndex = 131;
+            this.txt_num.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_num_KeyPress);
             // 
             // label1
             // 
