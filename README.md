@@ -14,6 +14,15 @@ This application is developed in C# and employs Microsoft Access as its database
 
 ![image](https://user-images.githubusercontent.com/118432407/216778204-bae61638-c0c7-4000-a66e-ea2fd3e313ea.png)
 
+- Insert Student Data
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/118432407/216778299-ba1984d7-65b4-4cea-afbb-6e70defb8a29.png)
+
+
 
 
 
