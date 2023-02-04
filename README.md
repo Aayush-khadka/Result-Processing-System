@@ -11,6 +11,8 @@ This application is developed in C# and employs Microsoft Access as its database
 - Login
 
 
-![App Screenshot](![image](https://user-images.githubusercontent.com/118432407/216777870-47896eae-c557-4e2f-9d2e-37d8a01ba281.png)
+![image](https://user-images.githubusercontent.com/118432407/216777945-f3b484c1-3902-4437-9fdb-7c7213ed88b3.png)
+
+)
 )
 
