@@ -1,16 +1,15 @@
-# Result Processing System
 
-The Result Processing System (RSP) is a program written in the C# programming language that stores and manages data in an MS Access database. The system is intended to aid in the computation and administration of student results.
+# Introduction
 
-This project was created for a Class 12 project assignment to demonstrate CRUD Operations.
+A Result Processing System (RPS) is software that assists schools and colleges in generating, recording, and managing their students' academic results. It is an easy-to-use program that can be used to handle the full result producing process, from entering students' grades to generating report cards.
+
+This application is developed in C# and employs Microsoft Access as its database. It has an easy-to-use interface for inputting student grades and generating grade report cards.
+
 
 ## Features
 
-- Insert,Update,Delete the Data
-- Print The Result
+- Login
 
 
-## Author
-
-- [@Aayush_Khadka](https://github.com/Aayush-khadka)
+![App Screenshot](https://imgur.com/a/MdKZIWP)
 
