@@ -22,6 +22,15 @@ This application is developed in C# and employs Microsoft Access as its database
 
 ![image](https://user-images.githubusercontent.com/118432407/216778299-ba1984d7-65b4-4cea-afbb-6e70defb8a29.png)
 
+- Insert Student Marks
+
+
+
+
+![image](https://user-images.githubusercontent.com/118432407/216778357-147ac5cc-c4eb-424e-8b18-8301b1db33e6.png)
+
+
+
 
 
 
