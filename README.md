@@ -7,12 +7,16 @@ This application is developed in C# and employs Microsoft Access as its database
 
 
 ## Features
-
 - Login
+![image](https://user-images.githubusercontent.com/118432407/216778204-bae61638-c0c7-4000-a66e-ea2fd3e313ea.png)
 
 
-![image](https://user-images.githubusercontent.com/118432407/216777945-f3b484c1-3902-4437-9fdb-7c7213ed88b3.png)
 
-)
-)
+
+
+
+
+## Author
+
+- [Aayush_Khadka](https://github.com/Aayush-khadka)
 
