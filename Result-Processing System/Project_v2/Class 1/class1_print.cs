@@ -17,7 +17,6 @@ namespace Project_v2
             InitializeComponent();
             MaximizeBox = false;
         }
-
         OleDbConnection conn;
         OleDbCommand cmd;
         OleDbDataAdapter da;
@@ -26,7 +25,6 @@ namespace Project_v2
 
         private void Print_Load(object sender, EventArgs e)
         {
-            
             string qur = "Select * from Class_1";
             conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Database\Database.mdb'");
             cmd = new OleDbCommand(qur, conn);
@@ -40,7 +38,6 @@ namespace Project_v2
             OleDbDataAdapter daa = new OleDbDataAdapter(cmd);
             daa.Fill(dss);
         }
-
         private void btn_Submit_Click(object sender, EventArgs e)
         {
             if (ds.Tables[0].Rows.Count != 0)

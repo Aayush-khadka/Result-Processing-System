@@ -12,6 +12,7 @@ namespace Project_v2
 {
     public partial class class1_delete : Form
     {
+        // Database Connection
         OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Database\Database.mdb'");
 
         public class1_delete()
@@ -19,11 +20,15 @@ namespace Project_v2
             InitializeComponent();
         }
 
+        //Delete Data from Student Data Table
         private void button1_Click(object sender, EventArgs e)
         {
+            // Checking if the Rollno  textbox is Empty
             if (txt_roll.Text != "")
             {
-                DialogResult result = MessageBox.Show("Do you want to Delete the row", "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                // Asking if you are Sure you want to Delete the Record 
+                DialogResult result = MessageBox.Show("Do you want to Delete the Record ", "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+               // If the result is YES the Row of the Entered Rollno is Deleted
                 if (result == DialogResult.Yes)
                 {
                     conn.Open();
@@ -37,20 +42,22 @@ namespace Project_v2
                     conn.Close(); 
                 }
             }
+            // Informing User about the Empty Field
             else
             {
                 MessageBox.Show("Empty Field", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-            
         }
-
+        // Delete Data From Student Marks Table 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Checking if the Rollno  textbox is Empty
              if (txt_num.Text!="")
             {
+                // Asking if you are Sure you want to Delete the Record 
                 DialogResult result = MessageBox.Show("Do you want to Delete the row", "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
-                if (result == DialogResult.Yes)
+                // If the result is YES the Row of the Entered Rollno is Deleted
+                 if (result == DialogResult.Yes)
                 {
                     conn.Open();
                     OleDbCommand cmd = new OleDbCommand();
@@ -64,17 +71,18 @@ namespace Project_v2
                     conn.Close();
                 }
             }
+             // Informing User about the Empty Field
             else
              {
                  MessageBox.Show("Empty Field", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
              }
-            
-
         }
-
+        // Cleaning the Whole Student Record Database
         private void button3_Click(object sender, EventArgs e)
         {
+            // Asking if the user is sure to Clean the Database
             DialogResult result = MessageBox.Show("Do you want to clean the Database?","ERROR", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+            // If the Answer is YEst the Database is Cleaned
             if (result == DialogResult.Yes)
             {
                 conn.Open();
@@ -86,10 +94,12 @@ namespace Project_v2
                 conn.Close();
             }
         }
-
+        // Cleaning the Whole Student Marks Record Database
         private void button4_Click(object sender, EventArgs e)
         {
+            // Asking if the user is sure to Clean the Database
             DialogResult result = MessageBox.Show("Do you want to clean the Database?","ERROR", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+            // If the Answer is YEst the Database is Cleaned
             if (result == DialogResult.Yes)
             {
                 conn.Open();
@@ -100,10 +110,9 @@ namespace Project_v2
                 MessageBox.Show("Database Emptyed", "Emptyed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 conn.Close();
             }
-        
         }
-
-        private void txt_roll_KeyPress(object sender, KeyPressEventArgs e)
+        // Valaditing the User input so, only numbers are accepted
+        private void Validate_num (object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
             if (!char.IsDigit(ch) &&
@@ -111,20 +120,6 @@ namespace Project_v2
                     ch != Convert.ToChar(Keys.Delete))
                 e.Handled = true;
         }
-
-        private void txt_num_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-
-
-
-
-
     }
 }
 

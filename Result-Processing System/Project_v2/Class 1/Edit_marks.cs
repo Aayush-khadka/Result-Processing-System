@@ -156,17 +156,13 @@ namespace Project_v2
 
                 return 0;
         }
-
         public static double gpa_check(double i)
         {
-
             double percentage = (i / 600) * 100;
             double gpa = (percentage / 100) * 4;
             double r_gpa = Math.Round(gpa, 2);
             return r_gpa;
-
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (txt_rollno.Text!="")
@@ -179,7 +175,6 @@ namespace Project_v2
                 int a = ds.Tables[0].Rows.Count;
                 int num = int.Parse(txt_rollno.Text);
                 int roll = num - 1;
-
                 if (num <= a)
                 {
                     txt_english.Text = ds.Tables[0].Rows[roll]["n_english"].ToString();
@@ -196,17 +191,11 @@ namespace Project_v2
                     MessageBox.Show("Unable to find Roll no ' " + txt_rollno.Text + " '", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-
             else
             {
                 MessageBox.Show("Empty Fields", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-            
-            
         }
-
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (txt_english.Text != "" && txt_maths.Text != "" && txt_nepali.Text != "" && txt_science.Text != "" && txt_social.Text != "" && txt_drawing.Text != "")
@@ -218,11 +207,7 @@ namespace Project_v2
                 int num_social = int.Parse(txt_social.Text);
                 int num_gk = int.Parse(txt_gk.Text);
                 int num_drawing = int.Parse(txt_drawing.Text);
-
                 int Attendance = int.Parse(txt_Attendance.Text);
-
-
-
                 if (num_maths < 100 && num_science < 100 && num_english < 100 && num_nepali < 100 && num_social < 100 && num_gk < 50 && num_drawing < 50)
                 {
                     string maths_grade = grade_check(num_maths);
@@ -232,7 +217,6 @@ namespace Project_v2
                     string science_grade = grade_check(num_science);
                     string gk_grade = grade_check50(num_gk);
                     string drawing_grade = grade_check50(num_drawing);
-
                     double maths_gpa = sub_gpa(maths_grade);
                     double social_gpa = sub_gpa(social_grade);
                     double nepali_gpa = sub_gpa(nepali_grade);
@@ -240,19 +224,14 @@ namespace Project_v2
                     double science_gpa = sub_gpa(science_grade);
                     double gk_gpa = sub_gpa(gk_grade);
                     double drawing_gpa = sub_gpa(drawing_grade);
-
                     double tot_obtained = (num_english + num_maths + num_nepali + num_science + num_social + num_gk + num_drawing);
                     double Total_gpa;
                     Total_gpa = gpa_check(tot_obtained);
-
                     int num = int.Parse(txt_rollno.Text);
                     int roll = num;
-
                     conn.Open();
                     OleDbCommand cmd = new OleDbCommand();
                     cmd.Connection = conn;
-
-
                     if (maths_grade == "NG" || social_grade == "NG" || nepali_grade == "NG" || english_grade == "NG" || science_grade == "NG" || gk_grade == "NG" || drawing_grade == "NG")
                     {
                         string Total_gpa2 = "NG";
@@ -292,7 +271,6 @@ namespace Project_v2
                         cmd.ExecuteNonQuery();
 
                     }
-
                     else
                     {
                         cmd.CommandText = @"Update Class_1 SET n_maths =@n_maths,g_maths=@g_maths,gp_maths=@gp_maths,n_science =@n_science,g_science=@g_science,gp_science=@gp_science,n_english=@n_english,g_english=@g_english,gp_english=@gp_english,n_nepali=@n_nepali,g_nepali=@g_nepali,gp_nepali=@gp_nepali,n_social=@n_social,g_social=@g_social,gp_social=@gp_social,n_drawing=@n_drawing,g_drawing=@g_drawing,gp_drawing=@gp_drawing,n_gk=@n_gk,g_gk=@g_gk,gp_gk=@gp_gk,total_marks=@total_marks,final_gpa=@final_gpa,Attendance=@Attendance where roll_no=@roll";
@@ -342,83 +320,12 @@ namespace Project_v2
                     txt_Attendance.Clear();
                 }
             }
-
             else
             {
                 MessageBox.Show("Empty Fields", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-
-
         }
-
-        private void txt_rollno_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-
-        private void txt_maths_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-        private void txt_science_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-        private void txt_nepali_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-        private void txt_gk_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-        private void txt_drawing_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-        private void txt_social_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-        private void txt_english_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-
-        private void txt_Attendance_KeyPress(object sender, KeyPressEventArgs e)
+        private void Validate_num(object sender, KeyPressEventArgs e)
         {
 
             char ch = e.KeyChar;
@@ -426,7 +333,6 @@ namespace Project_v2
                 ch != Convert.ToChar(Keys.Back) &&
                     ch != Convert.ToChar(Keys.Delete))
                 e.Handled = true;
-        
         }
     }
 }

@@ -36,8 +36,6 @@
             this.txt_roll = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             ((System.ComponentModel.ISupportInitialize)(this.data_view)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +98,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.data_view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.data_view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_view.Location = new System.Drawing.Point(12, 115);
+            this.data_view.Location = new System.Drawing.Point(12, 118);
             this.data_view.Name = "data_view";
             this.data_view.Size = new System.Drawing.Size(923, 408);
             this.data_view.TabIndex = 19;
@@ -113,7 +111,7 @@
             this.txt_roll.Name = "txt_roll";
             this.txt_roll.Size = new System.Drawing.Size(33, 20);
             this.txt_roll.TabIndex = 127;
-            this.txt_roll.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_roll_KeyPress);
+            this.txt_roll.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_num);
             // 
             // label2
             // 
@@ -141,27 +139,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lineShape1
-            // 
-            this.lineShape1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 1;
-            this.lineShape1.X2 = 953;
-            this.lineShape1.Y1 = 58;
-            this.lineShape1.Y2 = 58;
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(951, 535);
-            this.shapeContainer1.TabIndex = 130;
-            this.shapeContainer1.TabStop = false;
-            // 
             // class1_view
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,7 +152,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_fname);
             this.Controls.Add(this.btn_View_data);
-            this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "class1_view";
             this.Text = "class1_view";
@@ -195,8 +171,6 @@
         private System.Windows.Forms.TextBox txt_roll;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
 
     }
 }

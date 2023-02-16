@@ -86,7 +86,7 @@
             this.txt_fname.Name = "txt_fname";
             this.txt_fname.Size = new System.Drawing.Size(112, 20);
             this.txt_fname.TabIndex = 1;
-            this.txt_fname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_fname_KeyPress);
+            this.txt_fname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_txt);
             // 
             // txt_lname
             // 
@@ -96,7 +96,7 @@
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(112, 20);
             this.txt_lname.TabIndex = 2;
-            this.txt_lname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_lname_KeyPress);
+            this.txt_lname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_txt);
             // 
             // btn_Submit
             // 
@@ -131,7 +131,7 @@
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(112, 20);
             this.txt_phone.TabIndex = 3;
-            this.txt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_phone_KeyPress);
+            this.txt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_num);
             // 
             // lbl_age
             // 
@@ -152,7 +152,7 @@
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(33, 20);
             this.txt_age.TabIndex = 6;
-            this.txt_age.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_age_KeyPress);
+            this.txt_age.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_num);
             // 
             // lbl_dob
             // 
@@ -184,7 +184,7 @@
             this.txt_rollno.Name = "txt_rollno";
             this.txt_rollno.Size = new System.Drawing.Size(33, 20);
             this.txt_rollno.TabIndex = 4;
-            this.txt_rollno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_rollno_KeyPress);
+            this.txt_rollno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_num);
             // 
             // date_picker
             // 
@@ -196,8 +196,9 @@
             this.date_picker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.date_picker.Name = "date_picker";
             this.date_picker.Size = new System.Drawing.Size(116, 20);
-            this.date_picker.TabIndex = 19;
+            this.date_picker.TabIndex = 5;
             this.date_picker.ValueChanged += new System.EventHandler(this.date_picker_ValueChanged);
+            this.date_picker.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_num);
             // 
             // std_data
             // 

@@ -56,7 +56,7 @@
             this.groupBox1.Location = new System.Drawing.Point(45, 74);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(275, 127);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Data";
             // 
@@ -81,7 +81,7 @@
             this.button3.Location = new System.Drawing.Point(171, 78);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(90, 29);
-            this.button3.TabIndex = 130;
+            this.button3.TabIndex = 2;
             this.button3.Text = "CLEAN";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -96,7 +96,7 @@
             this.button1.Location = new System.Drawing.Point(13, 78);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 29);
-            this.button1.TabIndex = 129;
+            this.button1.TabIndex = 1;
             this.button1.Text = "DELETE";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -108,8 +108,8 @@
             this.txt_roll.MaxLength = 3;
             this.txt_roll.Name = "txt_roll";
             this.txt_roll.Size = new System.Drawing.Size(33, 20);
-            this.txt_roll.TabIndex = 128;
-            this.txt_roll.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_roll_KeyPress);
+            this.txt_roll.TabIndex = 0;
+            this.txt_roll.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_num);
             // 
             // lbl_fname
             // 
@@ -133,7 +133,7 @@
             this.groupBox2.Location = new System.Drawing.Point(414, 74);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(263, 127);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Student Marks";
             // 
@@ -158,7 +158,7 @@
             this.button4.Location = new System.Drawing.Point(158, 78);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(90, 29);
-            this.button4.TabIndex = 132;
+            this.button4.TabIndex = 5;
             this.button4.Text = "CLEAN";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -173,7 +173,7 @@
             this.button2.Location = new System.Drawing.Point(16, 78);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 29);
-            this.button2.TabIndex = 130;
+            this.button2.TabIndex = 4;
             this.button2.Text = "DELETE";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -185,8 +185,8 @@
             this.txt_num.MaxLength = 3;
             this.txt_num.Name = "txt_num";
             this.txt_num.Size = new System.Drawing.Size(33, 20);
-            this.txt_num.TabIndex = 131;
-            this.txt_num.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_num_KeyPress);
+            this.txt_num.TabIndex = 3;
+            this.txt_num.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_num);
             // 
             // label1
             // 

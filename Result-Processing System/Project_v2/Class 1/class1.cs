@@ -14,6 +14,7 @@ namespace Project_v2
         public class1()
         {
             InitializeComponent();
+            // When class One is Opened Dashbaord is Already Loaded in Panel
             one_form.Controls.Clear();
             dashboard dash = new dashboard() { TopLevel = false, TopMost = true };
             one_form.Controls.Add(dash);
@@ -21,6 +22,7 @@ namespace Project_v2
             dash.Dock = DockStyle.Fill;
         }
 
+        // Open Form (Class1_data) to Enter Student Data in the Panel
         private void btn_add_Click(object sender, EventArgs e)
         {
             one_form.Controls.Clear();
@@ -30,6 +32,7 @@ namespace Project_v2
             st_da.Dock = DockStyle.Fill;
         }
 
+        //Open From(std_marks_enter) to Enter Marks in the Panel
         public void btn_insert_Click(object sender, EventArgs e)
         {
             one_form.Controls.Clear();
@@ -38,7 +41,7 @@ namespace Project_v2
             insert.Show();
             insert.Dock = DockStyle.Fill;
         }
-
+        // Open From(class1_update) to Update the Data in the Panel
         private void btn_Update_Click(object sender, EventArgs e)
         {
             one_form.Controls.Clear();
@@ -47,7 +50,7 @@ namespace Project_v2
             update.Show();
             update.Dock = DockStyle.Fill;
         }
-
+        // Open the View Form(class1_view) in the Panel
         private void btn_view_Click(object sender, EventArgs e)
         {
             one_form.Controls.Clear();
@@ -56,7 +59,7 @@ namespace Project_v2
             view.Show();
             view.Dock = DockStyle.Fill;
         }
-
+        // Open the Delete Form (class1_delete)in the Panel
         private void btn_delete_Click(object sender, EventArgs e)
         {
             one_form.Controls.Clear();
@@ -65,7 +68,7 @@ namespace Project_v2
             delete.Show();
             delete.Dock = DockStyle.Fill;
         }
-
+        //Open the Print Form(class1_print) in The panel
         private void btn_Print_Click(object sender, EventArgs e)
         {
             one_form.Controls.Clear();
@@ -74,14 +77,14 @@ namespace Project_v2
             print.Show();
             print.Dock = DockStyle.Fill;
         }
-        
+        // Return to the Selection Form (Selection)
         private void btn_return_Click(object sender, EventArgs e)
         {
             Selection ret = new Selection();
             this.Hide();
             ret.Show();
         }
-
+        // When Clicked The dashboard Form(dashboard) is Loaded in the Panel
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             one_form.Controls.Clear();
@@ -91,7 +94,7 @@ namespace Project_v2
             dash.Dock = DockStyle.Fill;
 
         }
-
+        // Exit the Application
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();

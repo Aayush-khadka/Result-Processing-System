@@ -67,7 +67,7 @@
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(33, 20);
             this.txt_age.TabIndex = 44;
-            this.txt_age.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_age_KeyPress);
+            this.txt_age.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_num);
             // 
             // txt_dob
             // 
@@ -76,7 +76,7 @@
             this.txt_dob.Name = "txt_dob";
             this.txt_dob.Size = new System.Drawing.Size(112, 20);
             this.txt_dob.TabIndex = 43;
-            this.txt_dob.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dob_KeyPress);
+            this.txt_dob.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_num);
             // 
             // lbl_dob
             // 
@@ -108,7 +108,7 @@
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(112, 20);
             this.txt_phone.TabIndex = 40;
-            this.txt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_phone_KeyPress);
+            this.txt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_num);
             // 
             // lbl_phone
             // 
@@ -129,7 +129,7 @@
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(112, 20);
             this.txt_lname.TabIndex = 38;
-            this.txt_lname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_lname_KeyPress);
+            this.txt_lname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_txt);
             // 
             // txt_fname
             // 
@@ -139,7 +139,7 @@
             this.txt_fname.Name = "txt_fname";
             this.txt_fname.Size = new System.Drawing.Size(112, 20);
             this.txt_fname.TabIndex = 37;
-            this.txt_fname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_fname_KeyPress);
+            this.txt_fname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_txt);
             // 
             // lbl_lname
             // 
@@ -186,7 +186,7 @@
             this.txt_rollno.Name = "txt_rollno";
             this.txt_rollno.Size = new System.Drawing.Size(33, 20);
             this.txt_rollno.TabIndex = 33;
-            this.txt_rollno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_rollno_KeyPress);
+            this.txt_rollno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Validate_num);
             // 
             // lbl_fname
             // 

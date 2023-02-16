@@ -17,7 +17,6 @@ namespace Project_v2
         {
             InitializeComponent();
         }
-
         private void btn_View_data_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -31,7 +30,6 @@ namespace Project_v2
             data_view.DataSource = dt;
             conn.Close();
         }
-
         private void btn_view_marks_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -45,12 +43,10 @@ namespace Project_v2
             data_view.DataSource = dt;
             conn.Close();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string searchValue = txt_roll.Text;
             data_view.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
             bool valueResult = false;
                 foreach (DataGridViewRow row in data_view.Rows)
                 {
@@ -66,15 +62,13 @@ namespace Project_v2
                     } 
 
                 }
-
                 if (!valueResult)
                 {
                     MessageBox.Show("Unable to find Rollno" + txt_roll.Text, "Not Found");
                     return;
                 }
         }
-
-        private void txt_roll_KeyPress(object sender, KeyPressEventArgs e)
+        private void Validate_num (object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
             if (!char.IsDigit(ch) &&
@@ -82,6 +76,5 @@ namespace Project_v2
                     ch != Convert.ToChar(Keys.Delete))
                 e.Handled = true;
         }
-
     }
 }

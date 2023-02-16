@@ -59,7 +59,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(826, 68);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 2;
             // 
             // button1
             // 
@@ -74,7 +74,7 @@
             this.button1.Location = new System.Drawing.Point(726, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 40);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Exit";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
@@ -142,7 +142,7 @@
             this.btn_return.Location = new System.Drawing.Point(6, 405);
             this.btn_return.Name = "btn_return";
             this.btn_return.Size = new System.Drawing.Size(126, 34);
-            this.btn_return.TabIndex = 10;
+            this.btn_return.TabIndex = 7;
             this.btn_return.Text = "   Return ";
             this.btn_return.UseVisualStyleBackColor = true;
             this.btn_return.Click += new System.EventHandler(this.btn_return_Click);
@@ -160,7 +160,7 @@
             this.btn_add.Location = new System.Drawing.Point(3, 18);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(119, 34);
-            this.btn_add.TabIndex = 9;
+            this.btn_add.TabIndex = 1;
             this.btn_add.Text = "        Add Student";
             this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
@@ -177,7 +177,7 @@
             this.btn_Print.Location = new System.Drawing.Point(3, 253);
             this.btn_Print.Name = "btn_Print";
             this.btn_Print.Size = new System.Drawing.Size(119, 34);
-            this.btn_Print.TabIndex = 8;
+            this.btn_Print.TabIndex = 6;
             this.btn_Print.Text = "         Print Result";
             this.btn_Print.UseVisualStyleBackColor = true;
             this.btn_Print.Click += new System.EventHandler(this.btn_Print_Click);
@@ -194,7 +194,7 @@
             this.btn_delete.Location = new System.Drawing.Point(6, 206);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(119, 34);
-            this.btn_delete.TabIndex = 7;
+            this.btn_delete.TabIndex = 5;
             this.btn_delete.Text = "        Delete Data";
             this.btn_delete.UseVisualStyleBackColor = true;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
@@ -211,7 +211,7 @@
             this.btn_view.Location = new System.Drawing.Point(6, 158);
             this.btn_view.Name = "btn_view";
             this.btn_view.Size = new System.Drawing.Size(119, 34);
-            this.btn_view.TabIndex = 6;
+            this.btn_view.TabIndex = 4;
             this.btn_view.Text = "     View Data";
             this.btn_view.UseVisualStyleBackColor = true;
             this.btn_view.Click += new System.EventHandler(this.btn_view_Click);
@@ -228,7 +228,7 @@
             this.btn_Update.Location = new System.Drawing.Point(6, 112);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(122, 33);
-            this.btn_Update.TabIndex = 5;
+            this.btn_Update.TabIndex = 3;
             this.btn_Update.Text = "         Update Data";
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
@@ -245,7 +245,7 @@
             this.btn_insert.Location = new System.Drawing.Point(6, 65);
             this.btn_insert.Name = "btn_insert";
             this.btn_insert.Size = new System.Drawing.Size(121, 33);
-            this.btn_insert.TabIndex = 0;
+            this.btn_insert.TabIndex = 2;
             this.btn_insert.Text = "        Insert Marks";
             this.btn_insert.UseVisualStyleBackColor = true;
             this.btn_insert.Click += new System.EventHandler(this.btn_insert_Click);

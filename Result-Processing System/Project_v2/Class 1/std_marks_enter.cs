@@ -334,73 +334,7 @@ namespace Project_v2
 
         }
 
-        private void txt_rollno_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-
-        private void txt_maths_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-        private void txt_science_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-        private void txt_nepali_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-        private void txt_gk_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-        private void txt_drawing_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-        private void txt_social_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-        private void txt_english_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-
-        private void txt_Attendance_KeyPress(object sender, KeyPressEventArgs e)
+        private void Validate_num(object sender, KeyPressEventArgs e)
         {
 
             char ch = e.KeyChar;
@@ -408,7 +342,6 @@ namespace Project_v2
                 ch != Convert.ToChar(Keys.Back) &&
                     ch != Convert.ToChar(Keys.Delete))
                 e.Handled = true;
-
         }
     }
 }

@@ -16,6 +16,7 @@ namespace Project_v2
             InitializeComponent();
             MaximizeBox = false;
         }
+        // Checking Username and Password
         private void btn_login_Click(object sender, EventArgs e)
         {
             string username = txt_user.Text;

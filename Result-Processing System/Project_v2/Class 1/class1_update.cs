@@ -23,7 +23,6 @@ namespace Project_v2
             edit.Show();
             edit.Dock = DockStyle.Fill;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Panl_Edit.Controls.Clear();

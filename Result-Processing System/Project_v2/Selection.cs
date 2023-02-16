@@ -16,32 +16,12 @@ namespace Project_v2
             InitializeComponent();
             MaximizeBox = false;
         }
-
+        //Select Class One
         private void btn_class1_Click(object sender, EventArgs e)
         {
             class1 class1 = new class1();
             class1.Show();
-            this.Hide();  
-        }
-
-        private void btn_class2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Under Development");
-        }
-
-        private void btn_class3_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Under Development");
-        }
-
-        private void btn_class4_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Under Development");
-        }
-
-        private void btn_class5_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Under Development");
+            this.Hide();
         }
     }
 }

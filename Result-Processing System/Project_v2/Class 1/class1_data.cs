@@ -53,17 +53,14 @@ namespace Project_v2
                     MessageBox.Show("Data Inserted");
                     conn.Close();
                 }
-                catch(OleDbException)
+                catch (OleDbException)
                 {
                     MessageBox.Show("Student with same Roll no already Added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-
-                
             }
-
             else
             {
-                MessageBox.Show("Empty Fileds","Error",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Empty Fileds", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txt_fname.Clear();
                 txt_lname.Clear();
                 txt_phone.Clear();
@@ -71,12 +68,8 @@ namespace Project_v2
                 txt_age.Clear();
                 txt_rollno.Clear();
             }
-
-
-           
         }
-
-        private void txt_age_KeyPress(object sender, KeyPressEventArgs e)
+        private void Validate_num (object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
             if (!char.IsDigit(ch) &&
@@ -84,8 +77,7 @@ namespace Project_v2
                     ch != Convert.ToChar(Keys.Delete))
                 e.Handled = true;
         }
-
-        private void txt_lname_KeyPress(object sender, KeyPressEventArgs e)
+        private void Validate_txt(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
             if (char.IsDigit(ch) &&
@@ -93,35 +85,5 @@ namespace Project_v2
                     ch != Convert.ToChar(Keys.Delete))
                 e.Handled = true;
         }
-
-        private void txt_fname_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-
-        private void txt_phone_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-
-        private void txt_rollno_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-
-
-
     }
 }

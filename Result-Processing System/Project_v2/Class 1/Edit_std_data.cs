@@ -19,8 +19,6 @@ namespace Project_v2
             InitializeComponent();
 
         }
-
-        
         private void btn_retrive_Click(object sender, EventArgs e)
         {
             if (txt_rollno.Text != "")
@@ -82,10 +80,8 @@ namespace Project_v2
             {
                 MessageBox.Show("Empty Fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
         }
-
-        private void txt_rollno_KeyPress(object sender, KeyPressEventArgs e)
+        private void Validate_num(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
             if (!char.IsDigit(ch) &&
@@ -93,47 +89,10 @@ namespace Project_v2
                     ch != Convert.ToChar(Keys.Delete))
                 e.Handled = true;
         }
-
-        private void txt_fname_KeyPress(object sender, KeyPressEventArgs e)
+        private void Validate_txt(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
             if (char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-
-        private void txt_lname_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-
-        private void txt_phone_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-
-        private void txt_age_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
-                ch != Convert.ToChar(Keys.Back) &&
-                    ch != Convert.ToChar(Keys.Delete))
-                e.Handled = true;
-        }
-
-        private void txt_dob_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!char.IsDigit(ch) &&
                 ch != Convert.ToChar(Keys.Back) &&
                     ch != Convert.ToChar(Keys.Delete))
                 e.Handled = true;
