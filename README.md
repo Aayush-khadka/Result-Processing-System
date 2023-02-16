@@ -64,7 +64,11 @@ This application is developed in C# and employs Microsoft Access as its database
 
 
 ## Result Printing
-The inserted Marks is Graded and can be inserted in to a pre-made Result Format. 
+The inserted Marks is Graded and can be inserted in to a pre-made Result Format Which is Exported in a Microsoft Docs File. 
+
+## Extras
+- The Code is Fully Commented.
+
 
 
 
