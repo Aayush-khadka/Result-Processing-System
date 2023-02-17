@@ -17,6 +17,7 @@ namespace Project_v2
         public dashboard()
         {
             InitializeComponent();
+            // Counting the Number of Student in the Database
             string sql = "Select * from Std_Data";
             OleDbCommand cmmd = new OleDbCommand(sql, conn);
             DataSet ds = new DataSet();
@@ -24,7 +25,7 @@ namespace Project_v2
             daa.Fill(ds);
             lbl_student_count.Text = ds.Tables[0].Rows.Count.ToString();
 
-
+            // Counting the number of Result inserted
             string query= "Select * from Class_1";
             OleDbCommand cmd = new OleDbCommand(query, conn);
             DataSet dss = new DataSet();

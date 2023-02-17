@@ -25,12 +25,13 @@ namespace Project_v2
 
         private void Print_Load(object sender, EventArgs e)
         {
+            // Selecting Marks from the Database
             string qur = "Select * from Class_1";
             conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Database\Database.mdb'");
             cmd = new OleDbCommand(qur, conn);
             da = new OleDbDataAdapter(cmd);
             da.Fill(ds);
-
+            // Selecting Student Data from Database
             string qurr = "Select * from Std_Data";
             conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Database\Database.mdb'");
             cmd = new OleDbCommand(qurr, conn);
@@ -46,6 +47,7 @@ namespace Project_v2
 
                 for (int index = 0; index < ds.Tables[0].Rows.Count; index++)
                 {
+                    // Extracting data from the Databse 
                     string roll_no = dss.Tables[0].Rows[index]["Roll_no"].ToString();
                     string F_name = dss.Tables[0].Rows[index]["f_name"].ToString();
                     string L_name = dss.Tables[0].Rows[index]["l_name"].ToString();
@@ -84,7 +86,7 @@ namespace Project_v2
 
                     document = application.Documents.Add(Template: @"C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Report-Card_Format\Report-Card.docx");
 
-
+                    // Inserting Data into Microsoft Docs
                     foreach (Microsoft.Office.Interop.Word.Field field in document.Fields)
                     {
                         if (field.Code.Text.Contains("Roll no"))
@@ -237,6 +239,7 @@ namespace Project_v2
                         }
                     }
 
+                    // Saving the Result in the Dedicated Folder 
                     document.SaveAs(FileName: @"C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Result\Class-1\Result of " + F_name + ".docx");
                 }
                 lbl_loading.Text = " ";

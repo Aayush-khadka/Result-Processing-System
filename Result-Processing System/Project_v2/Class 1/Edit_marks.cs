@@ -12,12 +12,14 @@ namespace Project_v2
 {
     public partial class Edit_marks : Form
     {
+        // Databse Connection
         OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source='C:\Users\Aayush\Desktop\c# project\Project_v2\Result-Processing System\Database\Database.mdb'");
         OleDbCommand cmd = new OleDbCommand();
         public Edit_marks()
         {
             InitializeComponent();
         }
+        // Cheking for Grade from the number(Full marks is 100) given by user
         public static string grade_check(int z)
         {
             if (z >= 90)
@@ -62,7 +64,7 @@ namespace Project_v2
                 return n;
             }
         }
-
+        // Cheking for Grade from the number(Full marks is 50) given by user
         public static string grade_check50(int z)
         {
             if (z >= 45)
@@ -108,6 +110,7 @@ namespace Project_v2
             }
         }
 
+        // Getting the GP from the Grade
         public static double sub_gpa(string j)
         {
             if (j == "A+")
@@ -156,6 +159,7 @@ namespace Project_v2
 
                 return 0;
         }
+        // Getting the GPA from the total Marks
         public static double gpa_check(double i)
         {
             double percentage = (i / 600) * 100;
@@ -167,6 +171,7 @@ namespace Project_v2
         {
             if (txt_rollno.Text!="")
             {
+                // Editing the Marks and re-inserting it
                 string sql = "Select * from Class_1";
                 OleDbCommand cmmd = new OleDbCommand(sql, conn);
                 DataSet ds = new DataSet();
@@ -325,6 +330,7 @@ namespace Project_v2
                 MessageBox.Show("Empty Fields", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+        
         private void Validate_num(object sender, KeyPressEventArgs e)
         {
 

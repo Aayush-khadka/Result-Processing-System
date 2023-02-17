@@ -17,6 +17,7 @@ namespace Project_v2
         {
             InitializeComponent();
         }
+        // Filling the Datagridview with Student Data
         private void btn_View_data_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -30,6 +31,7 @@ namespace Project_v2
             data_view.DataSource = dt;
             conn.Close();
         }
+        // Filling the Datagridview with Student Marks
         private void btn_view_marks_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -43,6 +45,7 @@ namespace Project_v2
             data_view.DataSource = dt;
             conn.Close();
         }
+        //Higlight the selected row in datagridview
         private void button1_Click(object sender, EventArgs e)
         {
             string searchValue = txt_roll.Text;
@@ -68,6 +71,7 @@ namespace Project_v2
                     return;
                 }
         }
+        // Validate Number so character is not accepted
         private void Validate_num (object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;

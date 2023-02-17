@@ -19,6 +19,7 @@ namespace Project_v2
             InitializeComponent();
 
         }
+        //Selecting Student data from Database
         private void btn_retrive_Click(object sender, EventArgs e)
         {
             if (txt_rollno.Text != "")
@@ -50,7 +51,7 @@ namespace Project_v2
                 MessageBox.Show("Empty Fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-
+        // UPdating the Student Data
         private void btn_Update_Click(object sender, EventArgs e)
         {
             if (txt_age.Text != "" && txt_phone.Text != "" && txt_fname.Text != "" && txt_lname.Text != "")
