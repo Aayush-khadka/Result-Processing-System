@@ -1,4 +1,3 @@
-## Stars will be Appricated :D
 # Introduction
 
 A Result Processing System (RPS) is software that assists schools and colleges in generating, recording, and managing their students' academic results. It is an easy-to-use program that can be used to handle the full result producing process, from entering students' grades to generating report cards.
