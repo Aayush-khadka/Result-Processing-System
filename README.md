@@ -4,7 +4,7 @@ A Result Processing System (RPS) is software that assists schools and colleges i
 
 This application is developed in C# and employs Microsoft Access as its database. It has an easy-to-use interface for inputing student grades and generating grade report cards.
 
-This is school Project Made to Demonstrate the  CRUD operations.
+This is a school Project Made to Demonstrate the  CRUD operations.
 
 
 ## Features
