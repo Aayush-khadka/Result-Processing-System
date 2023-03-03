@@ -35,7 +35,7 @@ This application is developed in C# and employs Microsoft Access as its database
 
 ![image](https://user-images.githubusercontent.com/118432407/216778459-6966bfcf-8d14-433f-bce7-856feb65de35.png)
 
--Update Student Marks
+- Update Student Marks
 
 
 
